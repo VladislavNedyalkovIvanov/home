@@ -1,0 +1,69 @@
+body{background-color:black} /*цвят на background     #293B33  - ПРИМЕР       */ 
+
+.background_color{      /*цвят на background в div*/
+    background-color:black;
+}
+.margins{
+        font-family: Century;
+        font-size:xx-large;
+        background-color: #293B33;
+        color:whitesmoke;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-style: solid;
+        border-color: lawngreen;
+}
+.middle_margins{
+    font-family: Century;
+    font-size:x-large;
+    background-color: #293B33;
+    color:whitesmoke;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-style: solid;
+    border-color: lawngreen;
+}
+.little_margins{
+        font-family: Century;
+        font-size:small;
+        background-color: #293B33;
+        color:whitesmoke;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        margin-left: 5px;
+        border-style: solid;
+        border-color: lawngreen;
+}
+div{
+   background-color:black;
+   border-width: 2px;
+}
+h1{
+    color:greenyellow; /*цвят на текст h1*/
+    font-family: Arial;
+    text-align:center;
+} 
+p{
+    color:greenyellow; /* цвят на параграф p */
+    font-family: Century;
+} 
+hr{
+    color:limegreen;
+}
+#big-photo {
+    height: 500px;
+}
+img {
+    height: 500px;
+}
+.height_pictures {
+    height: 500px;
+}
+.weight_pictures {
+    height: 300px;
+}
