@@ -18,7 +18,7 @@ body{background-color:black; user-select:none;} /*цвят на background     #
 }
 .middle_margins{
     font-family: Century;
-    font-size:large;
+    font-size:x-large;
     background-color: #293B33;
     color:whitesmoke;
     margin-top: 5px;
@@ -88,4 +88,13 @@ img {
         background:transparent;
     z-index:100;
     
+    }
+
+    #increase, #decrease, #reset{
+        background-color:black;
+        color:greenyellow;
+        border-width: 4px;
+        border-color: green;
+        border-style: solid;
+        border-radius: 20%;
     }

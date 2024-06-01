@@ -17,30 +17,46 @@
         </div>
         <br/>
         <hr/>
+
+        <br/>
+        <br/>
+        <button type="buttоn" id="increase" onclick="zoominAll()">Увеличи всички вертикални картинки</button>
+        <button type="buttоn" id="decrease" onclick="zoomoutAll()">Намали всички вертикални картинки</button>
+        <button type="buttоn" id="reset" onclick="resetAll()">Нормализирай всички вертикални картинки</button>
         <br/>
         <p title="Основен текст">Рисунки на религиозна тематика:</p>
         <a href="img/image.jpg" target="_blank" rel="noopener noreferrer">
-            <img id="big-photo" title="Рисунка на Исус Христос" src="img/image.jpg" alt="">
+            <img class="height_pictures" title="Рисунка на Исус Христос" src="img/image.jpg" alt="">
         </a>
         <a href="img/image1.jpg" target="_blank" rel="noopener noreferrer">
-            <img title="Рисунка на Архангел Михаил" src="img/image1.jpg" alt="">
+            <img class="height_pictures" title="Рисунка на Архангел Михаил" src="img/image1.jpg" alt="">
         </a>
         <a href="img/image2.jpg" target="_blank" rel="noopener noreferrer">
-            <img title="Рисунка на Света Богородица" src="img/image2.jpg" alt="">
+            <img class="height_pictures" title="Рисунка на Света Богородица" src="img/image2.jpg" alt="">
         </a>
         <hr/>
         <p title="Основен текст">Рисунки на историческа тематика:</p>
         <a href="img/image3.jpg" target="_blank" rel="noopener noreferrer">
-            <img title="Рисунка на Христо Ботев" src="img/image3.jpg" alt="">
+            <img class="height_pictures" title="Рисунка на Христо Ботев" src="img/image3.jpg" alt="">
         </a>
         <a href="img/image4.jpg" target="_blank" rel="noopener noreferrer">
-            <img href="img/image4.jpg" title="Рисунка на Христо Ботев" src="img/image4.jpg" alt="">
+            <img class="height_pictures" href="img/image4.jpg" title="Рисунка на Христо Ботев" src="img/image4.jpg" alt="">
         </a>
         <hr/>
         <p title="Основен текст">Рисунки на друга тематика:</p>
+        <button type="buttоn" id="increase" onclick="zoomin()">Увеличи картинката</button>
+        <button type="buttоn" id="decrease" onclick="zoomout()">Намали картинката</button>
+        <button type="buttоn" id="reset" onclick="reset()">Нормализирай картинката</button>
+        <br/>
         <a href="img/image5.jpg" target="_blank" rel="noopener noreferrer">
-            <img title="Рисунка Красавицата и Звяра" src="img/image5.jpg" alt="">
+            <img id="big-photo" title="Рисунка Красавицата и Звяра" src="img/image5.jpg" alt="">
         </a>
+        <br/>
+        <br/>
+        <button type="buttоn" id="increase" onclick="zoominAllVertical()">Увеличи всички вертикални картинки</button>
+        <button type="buttоn" id="decrease" onclick="zoomoutAllVertical()">Намали всички вертикални картинки</button>
+        <button type="buttоn" id="reset" onclick="resetAllVertical()">Нормализирай всички вертикални картинки</button>
+        <br/>
         <br/>
         <a href="img/image6.jpg" target="_blank" rel="noopener noreferrer">
             <img class="weight_pictures" href="img/image6.jpg" title="Рисунка на фантастична жена" src="img/image6.jpg" alt="">
@@ -52,6 +68,7 @@
             <img class="weight_pictures" href="img/image8.jpg" title="Рисунка на змей" src="img/image8.jpg" alt="">
         </a>
         <br/>
+        <hr/>
         <br/>
         <div>
             <a class="margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self" rel="noopener noreferrer">Начална страница</a>
@@ -67,6 +84,6 @@
     <hr/>
     <br/>
     <p style="text-align:right;" title="Основен текст">Автор на сайта: Владислав Недялков Иванов</p>
-
+    <script src="./index.js"></script>
     </body>
 </html>
