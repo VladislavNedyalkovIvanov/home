@@ -3,7 +3,7 @@ body{background-color:black; user-select:none;} /*цвят на background     #
 .background_color{      /*цвят на background в div*/
     background-color:black;
 }
-.margins{
+.large_margins{
         font-family: Century;
         font-size:xx-large;
         background-color: #293B33;
