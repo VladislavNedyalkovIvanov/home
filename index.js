@@ -58,7 +58,7 @@ function resetAllVertical() {
     var myImages = document.getElementsByClassName("weight_pictures");
     for (var i = 0; i < myImages.length; i++) {
         var imgHeight = myImages[i].clientHeight;
-        if (imgHeight != 500) {
+        if (imgHeight != 300) {
             myImages[i].style.height = (imgHeight = 300) + "px";
         }
     }
