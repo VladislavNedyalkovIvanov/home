@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебни материали по история и цивилизации</title>
+    <link rel="stylesheet" type="text/css" href="./css/visual.css">
+</head>
+<body>
+    <div class="cover">
+        <br/>
+        <h1>Бекъп и клониране на диск с Macrium</h1>
+        <br/>
+            <a class="margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self" rel="noopener noreferrer">Начална страница</a>
+        <br/>
+        <hr/>
+        <pre>
+        1. Инсталация на програмата Marcium Reflect: 
+            
+         v7.2.3957_reflect_setup_free_x64.exe
+            
+            Инсталацията е тип Next -> Next и т.н. 
+            
+            В диалоговия прозорец за лиценз се задава тип "Home" със следните параметри:
+            E-mail:				
+            Your Registration Code is: 	
+            
+            След края на инсталацията се забраняват Update:		(Много е важно да не се инсталират никакви актуализации)
+            Help -> Configute Update Check... -> Update -> Премахват се всички отметки;
+            
+            
+            
+            Настройка на Boot меню:
+            Other Tasks -> Create Rescue Media... -> Advanced	-> Rescue Media Volume -> Избира се диск C:		
+                                        -> Devices & Drivers -> Scan WIM		                    (за да си качи необходимите драйвъри)
+                                        -> Options -> [v] Enable legacy SMB v1 support
+                                        -> Choose Base WIM -> Windows RE или Windows PE 10 (WADK) 	    (в повечето случаи съм ползвал Windows RE)
+                                        -> Build
+            
+            Готово, сега се рестартира компютъра, за да зареди на ниво Boot.
+            
+            
+            
+        2. Създаване на бекъп:
+            Зарежда се от предварително създаденото Boot меню на Macrium.
+            
+            Create Backups -> Image this disk... -> Отметки върху дяловете, на които ще се прави бекъп.
+            -> Избира се дестинация не бекъпа -> Next -> Next      и се изчаква да приключи.
+            
+            
+        3. Подмяна на твърд диск с нов (клониране):
+            Зарежда се от предварително създаденото Boot меню на Macrium.
+            
+            Create Backups -> Clone this disk... 	-> Избират се директориите (от горното меню), които ще се клонират			(старият диск)
+                                -> Избира се дестинацията за клониране (долното меню), които ще бъдат записани от старият диск		        (новият диск)
+            -> Next -> Next
+            
+            
+        4. Връщане от предварително създаден бекъп:
+            Зарежда се от предварително създаденото Boot меню на Macrium.
+            
+            Existing Backup -> Browse for an image file -> Избира се папката и необходимия backup image
+                    -> Избира се дестинация, върху която да бъде възстановен бекъп-а;
+            </pre>
+    </div>
+</body>
+</html>

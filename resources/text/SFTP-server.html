@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебни материали по история и цивилизации</title>
+    <link rel="stylesheet" type="text/css" href="./css/visual.css">
+</head>
+<body>
+    <div class="cover">
+        <br/>
+        <h1>Настройка на SFTP и FTP сървър</h1>
+        <br/>
+            <a class="margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self" rel="noopener noreferrer">Начална страница</a>
+        <br/>
+        <hr/>
+<pre>
+    1. Обща информация за SFTP софтуер:
+    Текуща версия на продукта:   			9.26
+    инсталационен файл:				        Bitvise SSH 9.26
+    
+    Лиценз и акаунти за лицензиране:
+    Login site:	        https://bitvise.com/actv/overview		(bitvise.com -> My licenses)
+    login name1:	primary@test.com
+    login name2:	primary1@test.com
+    login name3:	
+    password:	
+    
+    
+        
+    
+    
+    2. Предварителни настройки за портове в защитната стена:
+    
+    Настройки в Router (https://10.0.0.1):
+                                                    (замени с вътрешен IP адрес на рутера)		    (замени 1.1.1.1 с реалния външен IP адрес и 543 и 545 с реалния външен порт)
+    Name:		    Server Type:	    IP Address:		Ports:			            Public IP Address:	
+    SFTP_Server		    FTP Server		    10.0.0.2		TCP:3434		            1.1.1.1:543
+    SFTP_Server_550         FTP Server		    10.0.0.2		TCP:550			            1.1.1.1:544
+    FtpServer		    FTP Server		    10.0.0.2		TCP:50093-50197		            1.1.1.1
+    
+    
+    
+    Настройки в защитната стена на компютъра - сървър на Bitvise (Remote desktop: 10.0.0.2):
+    *Настроено е през потребител:   PRIMARYDOMAIN\Administrator		
+    
+    Inbound Rules:
+    Name:				Profile			    Action		Program		    Local Address	Remote Address	 	        Protocol	    Local Port		Remote Ports
+    SFTP Port			        All			    Allow		Any		    Any		        Any			        TCP		    3434	        Any		
+    SFTP UDP			        All			    Allow		Any		    Any		        Any			        UDP		    3434	        Any
+    NTP from NAT forwarding		All			    Allow		Any		    Any		        Any			        TCP		    50093-50197		Any
+    NTP from NAT forwarding UDP         All			    Allow		Any		    Any		        Any			        UDP		    50093-50197		Any
+    
+    Outbound Rules:
+    Name:                               Profile			    Action		Program		    Local Address	Remote Address	 	        Protocol	    Local Port		Remote Ports
+    SFTP Tcp port		        All			    Allow		Any		    Any		        Any			        TCP		    3434	        Any		
+    SFTP Udp port		        All			    Allow		Any		    Any		        Any			        UDP		    3434	        Any
+    NTP from NAT forwarding		All			    Allow		Any		    Any		        Any			        TCP		    50093-50197		Any
+    
+    
+    
+    
+    3. Инсталация
+    Всичко се оставя, както е по подразбиране:
+        [v] Install new Bitvise SSH Server instance:
+        [v] Install new default instance (Bitvise SSH Server)
+        [v] run Bitvise SSH Server
+        [v] I agree to accept all the terms of this License Agreement
+    Install
+    
+    
+    4. Настройки
+    Bitvise SSH Server -> About -> Update settings -> Automatic updates -> Do not check for updates 	(важно е, защото включването на Updates е платена услуга и не е включена в лиценза)
+    Bitvise SSH Server -> About -> Update settings -> Activation: 						Тук се въвеждат данните за лиценза
+    
+    Bitvise SSH Server -> Server -> Open easy settings -> 1. Server settings:
+    IP versions for listening ports:			        [IPv4 and IPv6]
+    Listening port for SSH:					[3434]
+    Enable FTPS:						[ ] 						(не е активирано)
+    Automatically configure router (requires UPnP)		[Disabled]
+    Open Windows Firewall:					[Open port(s) to local network (subnet scope, non-Public profiles only]
+    Password authentication:				        [Permit for any account type]
+    Enable trace logging:					[ ]
+    
+    
+    Bitvise SSH Server -> Server -> Open easy settings -> 2. Windows accounts:
+    Allow login to any Windows account			[ ]						(не е активирано)
+    
+    
+    Bitvise SSH Server -> Server -> Open easy settings -> 3. Virtual accounts:
+    
+    #	Virtual account name	Login allowed		Public keyps imported		Allow file transfer	Shell access type	Allow port 	Virtual filesystem layout	 Root directory
+    1	Test		        [v]			0 keys			        [v]		        BvShell			[v]		Limit to root directory:	 D:\SFTP\Me\Test	
+                                                                                                                                                       
+    
+    2	Test1		        [v]			0 keys			        [v]		        BvShell			[v]		Limit to root directory:	 D:\SFTP\Me\Test1
+                                                                            
+    
+    Добавяне на нов акаунт за достъп:
+    Bitvise SSH Server -> Server -> Open easy settings -> 3. Virtual accounts -> Add:
+    Virtual account name:           Test				(пример)
+    Virtual account password:       click for set password		(за добавяне на парола се натиска върху хипервръзката)
+    Root directory:                 D:\SFTP\Test			(пример за задаване на физическа директория на виртуалния акаунт) 
+    Access permissions:             *Достъпите се определят от тук, а не от папката. Програмата ги добавя автоматично
+    OK -> Save changes;
+    Готово, акаунтът е създаден.
+    
+    
+    Наблюдение на текущи връзки:
+    Bitvise SSH Server 9.26 -> Control panel -> Connections 
+    
+    Activity и Statistics дават информация за активност и минали събития.
+    
+    
+    
+    
+    IP and port:		    1.1.1.1:543			
+    type:                           SFTP
+    
+    Active users:
+    user:	      		    password:
+    
+    Test          		
+    Test1     		 
+    
+    
+    
+</pre>
+    </div>
+</body>
+</html>

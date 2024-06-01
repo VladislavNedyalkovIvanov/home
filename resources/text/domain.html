@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебни материали по история и цивилизации</title>
+    <link rel="stylesheet" type="text/css" href="./css/visual.css">
+</head>
+<body>
+    <div class="cover">
+        <br/>
+        <h1>Домейн контролер - управление и настройки</h1>
+        <br/>
+            <a class="margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self" rel="noopener noreferrer">Начална страница</a>
+        <br/>
+        <hr/>
+<pre>
+    1. Обща информация за домейна:
+
+    Главен домейн контролер:		    10.0.0.2			(DC-SERVER)
+    Резервен домейн контролер:		    10.0.0.3			(DC1-SERVER)
+    Споделена директория в мрежата:	    10.0.0.4/5		        (SHARES) 	(NAS drive QNAP, чиито файлови директории и достъпи се управляват от домейна)
+    
+    
+    В поле сървъри са описани и има хипервръзка на -> Click, която отваря всички налични настройки за дадени устройство.
+    
+    Управлява се през Remote desktop (10.0.0.2) с потребител:
+    PRIMARYDOMAIN\Administrator
+    
+    
+    адрес на домейн:
+    primarydomain.com
+    
+    Име на домейн:
+    PRIMARYDOMAIN
+    
+    Фунционално ниво на домейна:
+    Windows Server 2008 R2
+    
+    
+
+
+
+
+    2. Повече информация за роли и функции на сървърите:
+    
+    10.0.0.2 (Главен домейн контролер) - Активирани роли:
+    - Active Directory Domain Services (ADDS)
+    - DHCP:
+        pool: 			10.0.0.10 - 10.0.0.200
+        scope options:		
+        003 Router:  		10.0.0.1	
+        004 Time Server:	10.0.0.2
+        005 Name Servers:	10.0.0.2; 10.0.0.3
+        006 DNS Servers:	10.0.0.2
+        015 Domain name:	primarydomain.com
+    - Domain name services (DNS)
+    - File Services;
+    
+    Domain naming operation master
+    Schema master
+    Domain naming master
+    PDC
+    RID pool manager
+    Infrastructure master
+    
+    
+    
+    - Резервен домейн контролер - Активирани роли:
+        Active Directory Domain Services (ADDS)
+        Domain name services (DNS)
+        File Services
+    
+    
+    
+
+
+    3. При смяна на домейн контролер:
+
+    *Задължително да се изпълни, преди да се стартира dcpromo за премахване на сървър:
+    
+    Active Directory Sites and Services -> Sites -> Default-First-Site-Name -> Servers -> Избираме сървъра, който ще премахваме -> Properties 
+    -> Object -> [ ] Protect object from accidental deletion					
+    (премахва се отметката, която пази от инцидентно изтриване или премахване на домейн контролера)
+    
+    - Стартираме dcpromo.exe от сървъра, който ще премахваме и следваме стъпките.
+    
+    
+    
+
+
+    4. Активирани групови политики:
+
+    Политика за нулеви изисквания към паролата на потребителите в домейна:
+    Group Policy management -> Forest: primarydomain.com -> Domains -> primarydomain.com -> Group Policy Objects -> Default Domain Policy:
+    
+    (нулеви изисквания за парили на акаунти, не се препоръчва)
+    
+    Computer Configuration -> Policies -> Windows Settings -> Security Settings -> Account Policies -> Password Policy:
+    
+    Enforce passowrd history:                       0 passwords remembered
+    Maximum password age:                           0
+    Minimum password age:                           0 days
+    Minimum password length:                        0 characters
+    Minimum password length audit:                  Not defined
+    Password must meet complexity requirements:     Disabled
+    Store passwords using reversible encryption:    Disabled
+    
+    
+    Политика за автоматично позволение на Remote desktop на всички устройства в домейна (въведено по време на Ковид 19):
+    *Ако не е ръчно добавен потребителя, ще работи само за Administrators; 
+    *По подразбиране на Domain users е забранено да използват Remote desktop;
+    
+    Computer Configuration -> Policies -> Administrative Templates: 
+        -> Policy definitions -> Windows Components -> Remote Desktop services -> Remote Desktop Sesion Host -> Connections:
+                    Allow users to connect remotely by using Remote Desktop services: 	Enabled
+
+    
+    - За да проработи Remote desktop за domain user, различен от администратор:
+    
+    Добавя се ръчно на самият компютър, който ще се управлява дистанционно от следното меню:
+    This PC -> Properties -> System -> Advanced system settings -> Remote -> Select Users -> Add...
+    test.testov(примерен потребител) -> OK 
+    *Това можа да се извърши и през Remote desktop, логвайки се с администраторски акаунт. Удобно е, понеже не се налага физическо посещение на компютъра. 
+    
+    - *2 вариант, който не препоръчвам, поради съображения за сигурност - добавяне на самият потребител от сървъра в групата Remote desktop users.
+    
+    
+    Освен това е необходима и следната настройка върху предварително дефиниран .rdp файл:
+    *необходимост след въвеждането на политика върху потребителите за вписване само на предварително дефинирани компютри. 	
+    (описана по-долу в файла - точка 4. Създаване на потребител)
+    
+    enablecredsspsupport:i:0   	(дефинира се с дясно копче върху .rdp файлът -> open with Notepad -> Ако го има предварително дефинирано се подменя от 1 на 0. 
+                                Ако го няма се копира и добавя този ред)
+    
+    *Всички предварително дефинирани .rdp файлове съм поставил в директория:
+    Connections RDP
+    
+    
+    
+    
+
+    5. Допълнителни политики, които могат да бъдат активнирани по желание:
+    
+    *От тук може да се забрани употребата на флаш драйв устройства (към момента не е конфигурирано):
+    
+    Computer Configuration -> Policies -> Administrative Templates: Policy definitions -> System -> Removable Storage Access:
+    Removable Disks: Deny execute access
+    Removable Disks: Deny read access
+    Removable Disks: Deny write access
+    All Removable Storages: Deny all access;
+    
+    
+    *От тук може да се забрани Windows Update да инсталира и обновява драйвъри (към момента не е конфигурирано):
+    
+    Computer Configuration -> Policies -> Administrative Templates: Policy definitions -> System -> Driver Installation:
+    Allow non-administrators to install drivers for these device setup classes:	    No
+    Turn off Windows Update device driver seach prompt:                             Yes
+    
+    
+    
+    
+    
+    6. Добавяне на нов компютър в домейн:                                                   (ако домеина е на ниво SMB 1.0)
+   
+    Control Panel -> Programs and Features -> Turn Windows features on or off:
+        [v] SMB 1.0/CIFS File Sharing Support:
+        [v] SBM 1.0/CIFS Client                                                             (Изискване за присъединяване на компютър в домейна)
+    
+    *!!! Задава се име на компютъра, което няма да бъде поменяно. В повечето случаи името на потребителя, който ще го ползва и годината на закупуване. 
+    (Свързано с политиката за вписване на потребителите към определен компютър)
+    
+    This PC -> Properties -> System -> Advanced system settings -> Computer Name -> Change -> Computer Name -> TEST-PC23 (пример)
+    
+    След това от същото меню -> Member of:
+        [v] Domain 
+        primarydomain.com
+    
+    В диалоговия прозорец се задава потребителско име на администратор:
+    PRIMARYDOMAIN\Administrator
+    и парола
+    
+    След рестарт, компютърът е вече член на домейна.
+    
+    
+
+
+
+    7. Създаване на нов потребител (необходим за вписване в компютъра):
+    
+    Active Directory Administrative Center -> Primarydomain (local) -> Намира се необходимият отдел (Organisation Unit) -> New -> User;
+    Попълват се следните полета:
+    
+    Страница - Account
+    First name:
+    Last name:
+    User SamAccountName:	[primarydomain] \ [test.testov] попълват се име и фамилия, разделени с точка;
+        [v] Other password options
+        [v] Password never expires
+        [v] Protect from accidental deletion
+    
+    
+    
+    *!!! Политика, която позволява на даден потребител да се вписва само на предварително зададени компютри. 
+    Ако не са написани точните имена на компютрите, потребителят няма да успее да се впише. 
+    
+    
+    Log on to:
+    [ ]
+    [v]The following computers
+    COMPUTER-PC                         (име на компютъра 1 към 1)
+    COMPUTER-PC.primarydomain.com       (име на компютъра 1 към 1 + домейн)
+    
+    
+    Страница - Member of:
+    - Тук се добавят необходимите групи (Могат да се видят от съществуващ потребител със същото ниво на достъпи)
+    
+    
+
+
+
+    8. Необходим софтуер и настройки на потребителя:
+    *Ако всички потребители във фирмата използват Windows операционна система, която се закупува заедно с компютъра.
+    
+    - Office пакет, който е включен за всички, които имат абонамент в Office 365 (поща в @primarydomain.com).
+
+    OfficeSetup 32 bit BG.exe		(препоръчва се 32 битовата версия) - На български
+    OfficeSetup 32 bit US.exe		(препоръчва се 32 битовата версия) - На английски
+    
+    Активацията на лиценза се извършва, като се впише потребителското име и паролата за достъп до пощата.
+    *Акаунти на новите потребители в @primarydomain.com създава:			 
+    administrator@primarydomain.com
+    
+    *Задължително - Настройка за защитата, която може да повлияе на експортите, които създава някоя от програмите:
+    
+    Word -> Файл -> Опции -> Център за сигурност -> Настройки на центъра за сигурност -> Защитен изглед:	(активира се и в двете програми)
+    Excel -> Файл -> Опции -> Център за сигурност -> Настройки на центъра за сигурност -> Защитен изглед:	(активира се и в двете програми)
+    [ ] Активирай защитен изглед за файлове, които произхождат от интернет
+    [ ] Активирай защитен изглед за файлове, които се намират в потенциално опасни местоположения
+    [v] Активирай защитен изглед за прикачени файлове в Outlook
+    
+    - Кирилизация, която включва . в панела от дясно, който се използва масово за въвеждане на числови данни.
+    
+    
+
+
+    
+    9. Добавяне на новите клавиатури:
+        
+    Start menu -> Настройки/Settings -> Time & Language -> Typing -> Advanced keyboard settings -> Override ofr default imput method:	
+    English (United States) - US
+    
+    Start menu -> Настройки/Settings -> Time & Language -> Language -> Preffered languages -> Bulgarian -> ... Language options -> Add keyboard:
+    *Понякога е необходим рестарт/update преди да бъдат видими.
+    
+    Bulgarian - Primarydomain
+    Bulgarian (Phonetic Traditional) - Primarydomain
+    
+    
+    - *!!! Задължително - Настройка на регион и формат:
+    Control Panel -> Region 	-> Format: Bulgarian (Bulgaria)
+                    -> Additional settings...
+                        -> Numbers:
+                        Decimal symbol:                 .
+                        Digit grouping symbol:          ,
+    Apply -> OK
+    Control Panel           -> Region   -> Additional settings...
+                            -> Currency:
+                            Decimal symbol:             .
+                            Digit grouping symbol:      ,
+    Apply -> OK
+    
+    *Проверява се отново, дали са въведени успешно, понеже понякога Windows бъгва и въпреки потвърждението не прилага настройките.
+    
+    Control Panel           -> Region   -> Administrative -> Current language for non-Unicode programs:
+                            -> Change system locale...:
+                                Bulgarian (Bulgaria)
+
+    *Също е важно, понеже ако не е активирано на български не винаги успява да разчете символи на кирилица.
+    
+    
+</pre>
+    </div>
+</body>
+</html>

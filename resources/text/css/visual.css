@@ -52,9 +52,13 @@ h1{
     text-align:center;
 } 
 p{
-    color:greenyellow; /* цвят на параграф p */
+    color:white; /* цвят на параграф p */
     font-family: Century;
 } 
+pre{
+    color:white;
+    font-size:large;
+}
 hr{
     color:limegreen;
 }
