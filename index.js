@@ -64,27 +64,27 @@ function resetAllVertical() {
     }
 }
 
-function zoomin(){
+function zoomin() {
     var myImage = document.getElementById("big-photo");
     var imgHeight = myImage.clientHeight;
-    if(imgHeight >=2000)
+    if (imgHeight >= 2000)
         alert("Достигнат е максимален размер на картинката!")
     else
         myImage.style.height = (imgHeight + 50) + "px";
 }
 
-function zoomout(){
+function zoomout() {
     var myImage = document.getElementById("big-photo");
     var imgHeight = myImage.clientHeight;
-    if(imgHeight <=49)
+    if (imgHeight <= 49)
         alert("Достигнат е минимален размер на картинката!")
     else
         myImage.style.height = (imgHeight - 50) + "px";
 }
 
-function reset(){
+function reset() {
     var myImage = document.getElementById("big-photo");
     var imgHeight = myImage.clientHeight;
-    if(imgHeight != 500)
+    if (imgHeight != 500)
         myImage.style.height = (imgHeight = 500) + "px";
 }

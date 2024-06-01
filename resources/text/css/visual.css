@@ -1,26 +1,20 @@
-body{background-color:black; user-select:none;} /*цвят на background     #293B33  - ПРИМЕР   user-select - не може да се копира текст    */ 
+body {
+    background-color: black;
+    user-select: none;
+}
 
-.background_color{      /*цвят на background в div*/
-    background-color:black;
+/*цвят на background     #293B33  - ПРИМЕР   user-select - не може да се копира текст    */
+
+.background_color {
+    /*цвят на background в div*/
+    background-color: black;
 }
-.large_margins{
-        font-family: Century;
-        font-size:xx-large;
-        background-color: #293B33;
-        color:whitesmoke;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-right: 5px;
-        margin-left: 5px;
-        border-style: solid;
-        border-radius: 7px;
-        border-color: lawngreen;
-}
-.middle_margins{
+
+.large_margins {
     font-family: Century;
-    font-size:x-large;
+    font-size: xx-large;
     background-color: #293B33;
-    color:whitesmoke;
+    color: whitesmoke;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
@@ -29,68 +23,99 @@ body{background-color:black; user-select:none;} /*цвят на background     #
     border-radius: 7px;
     border-color: lawngreen;
 }
-.little_margins{
-        font-family: Century;
-        font-size:small;
-        background-color: #293B33;
-        color:whitesmoke;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-right: 5px;
-        margin-left: 5px;
-        border-style: solid;
-        border-radius: 5px;
-        border-color: lawngreen;
-}
-div{
-   background-color:black;
-   border-width: 2px;
-}
-h1{
-    color:greenyellow; /*цвят на текст h1*/
-    font-family: Arial;
-    text-align:center;
-} 
-p{
-    color:white; /* цвят на параграф p */
+
+.middle_margins {
     font-family: Century;
-} 
-pre{
-    color:white;
-    font-size:large;
+    font-size: x-large;
+    background-color: #293B33;
+    color: whitesmoke;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-style: solid;
+    border-radius: 7px;
+    border-color: lawngreen;
 }
-hr{
-    color:silver;
+
+.little_margins {
+    font-family: Century;
+    font-size: small;
+    background-color: #293B33;
+    color: whitesmoke;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: lawngreen;
 }
-span{
-    color:white;
+
+div {
+    background-color: black;
+    border-width: 2px;
 }
+
+h1 {
+    color: greenyellow;
+    /*цвят на текст h1*/
+    font-family: Arial;
+    text-align: center;
+}
+
+p {
+    color: white;
+    /* цвят на параграф p */
+    font-family: Century;
+}
+
+pre {
+    color: white;
+    font-size: large;
+}
+
+hr {
+    color: silver;
+}
+
+span {
+    color: white;
+}
+
 #big-photo {
     height: 500px;
 }
+
 img {
     height: 500px;
 }
+
 .height_pictures {
     height: 500px;
 }
+
 .weight_pictures {
     height: 300px;
 }
-.content{               /* забрана за копиране на текст ??? */
-    position:relative;
-    padding:1rem;
-    }
-    .cover{                 /* забрана за ? */
-        position:absolute;
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        width:100%;
-        height:100%;
-        background:transparent;
-        background-color:black;
-    z-index:100;
-    
-    }
+
+.content {
+    /* забрана за копиране на текст ??? */
+    position: relative;
+    padding: 1rem;
+}
+
+.cover {
+    /* забрана за ? */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-color: black;
+    z-index: 100;
+
+}

@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8" />
-        <meta name="description" content="Сайт за новобранци в програмирането." />
-        <meta name="author" content="Vladislav Ivanov" />
-        <meta name="keyboard" content="HTML, CSS, JS, C#" />
-        <title>Страница за моите рисунки</title>
-        <link rel="stylesheet" type="text/css" href="./resources/css/visual.css">
-    </head>
-    <body>
-        <h1> Галерия с рисунки</h1>
-        <br/>
-        <div>
-            <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self" rel="noopener noreferrer">Начална страница</a>
-        </div>
-        <hr/>
-        <br/>
-        <p title="Основен текст">Рисунки на религиозна тематика:</p>
-        <button type="buttоn" id="increase" onclick="zoominAll()">Увеличи всички вертикални картинки</button>
-        <button type="buttоn" id="decrease" onclick="zoomoutAll()">Намали всички вертикални картинки</button>
-        <button type="buttоn" id="reset" onclick="resetAll()">Нормализирай всички вертикални картинки</button>
-        <br/>
-        <br/>
-        <a href="./resources/img/image.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="height_pictures" title="Рисунка на Исус Христос" src="./resources/img/image.jpg" alt="">
-        </a>
-        <a href="./resources/img/image1.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="height_pictures" title="Рисунка на Архангел Михаил" src="./resources/img/image1.jpg" alt="">
-        </a>
-        <a href="./resources/img/image2.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="height_pictures" title="Рисунка на Света Богородица" src="./resources/img/image2.jpg" alt="">
-        </a>
-        <hr/>
-        <p title="Основен текст">Рисунки на историческа тематика:</p>
-        <a href="./resources/img/image3.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="height_pictures" title="Рисунка на Христо Ботев" src="./resources/img/image3.jpg" alt="">
-        </a>
-        <a href="./resources/img/image4.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="height_pictures" href="./resources/img/image4.jpg" title="Рисунка на Христо Ботев" src="./resources/img/image4.jpg" alt="">
-        </a>
-        <hr/>
-        <p title="Основен текст">Рисунки на друга тематика:</p>
-        <button type="buttоn" id="increase" onclick="zoomin()">Увеличи картинката</button>
-        <button type="buttоn" id="decrease" onclick="zoomout()">Намали картинката</button>
-        <button type="buttоn" id="reset" onclick="reset()">Нормализирай картинката</button>
-        <br/>
-        <br/>
-        <a href="./resources/img/image5.jpg" target="_blank" rel="noopener noreferrer">
-            <img id="big-photo" title="Рисунка Красавицата и Звяра" src="./resources/img/image5.jpg" alt="">
-        </a>
-        <br/>
-        <br/>
-        <button type="buttоn" id="increase" onclick="zoominAllVertical()">Увеличи всички вертикални картинки</button>
-        <button type="buttоn" id="decrease" onclick="zoomoutAllVertical()">Намали всички вертикални картинки</button>
-        <button type="buttоn" id="reset" onclick="resetAllVertical()">Нормализирай всички вертикални картинки</button>
-        <br/>
-        <br/>
-        <a href="./resources/img/image6.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="weight_pictures" href="./resources/img/image6.jpg" title="Рисунка на фантастична жена" src="./resources/img/image6.jpg" alt="">
-        </a>
-        <a href="./resources/img/image7.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="weight_pictures" href="./resources/img/image7.jpg" title="Рисунка на змей" src="./resources/img/image7.jpg" alt="">
-        </a>
-        <a href="./resources/img/image8.jpg" target="_blank" rel="noopener noreferrer">
-            <img class="weight_pictures" href="./resources/img/image8.jpg" title="Рисунка на змей" src="./resources/img/image8.jpg" alt="">
-        </a>
-        <br/>
-        <hr/>
-        <br/>
-        <div>
-            <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self" rel="noopener noreferrer">Начална страница</a>
-        </div>
-        <br/>
-    
-        <a class="little_margins" href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">Това е линк към сайт за обучение по програмиране.</a>
-        <span><strong>Отворете линка, ако искате да пробвате HTML.</strong></span>
-        <br/>
-        <br/>
-        <a class="little_margins" href="https://edu.uni-sz.bg" target="_blank" rel="noopener noreferrer">Това е линк към университета, който ме научи.</a>
-        <span><strong>Отворете линка, ако искате да се запишете.</strong></span>
-    <hr/>
-    <br/>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="description" content="Сайт за новобранци в програмирането." />
+    <meta name="author" content="Vladislav Ivanov" />
+    <meta name="keyboard" content="HTML, CSS, JS, C#" />
+    <title>Страница за моите рисунки</title>
+    <link rel="stylesheet" type="text/css" href="./resources/css/visual.css">
+</head>
+
+<body>
+    <h1> Галерия с рисунки</h1>
+    <br />
+    <div>
+        <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self"
+            rel="noopener noreferrer">Начална страница</a>
+    </div>
+    <hr />
+    <br />
+    <p title="Основен текст">Рисунки на религиозна тематика:</p>
+    <button type="buttоn" id="increase" onclick="zoominAll()">Увеличи всички вертикални картинки</button>
+    <button type="buttоn" id="decrease" onclick="zoomoutAll()">Намали всички вертикални картинки</button>
+    <button type="buttоn" id="reset" onclick="resetAll()">Нормализирай всички вертикални картинки</button>
+    <br />
+    <br />
+    <a href="./resources/img/image.jpg" target="_blank" rel="noopener noreferrer">
+        <img class="height_pictures" title="Рисунка на Исус Христос" src="./resources/img/image.jpg" alt="">
+    </a>
+    <a href="./resources/img/image1.jpg" target="_blank" rel="noopener noreferrer">
+        <img class="height_pictures" title="Рисунка на Архангел Михаил" src="./resources/img/image1.jpg" alt="">
+    </a>
+    <a href="./resources/img/image2.jpg" target="_blank" rel="noopener noreferrer">
+        <img class="height_pictures" title="Рисунка на Света Богородица" src="./resources/img/image2.jpg" alt="">
+    </a>
+    <hr />
+    <p title="Основен текст">Рисунки на историческа тематика:</p>
+    <a href="./resources/img/image3.jpg" target="_blank" rel="noopener noreferrer">
+        <img class="height_pictures" title="Рисунка на Христо Ботев" src="./resources/img/image3.jpg" alt="">
+    </a>
+    <a href="./resources/img/image4.jpg" target="_blank" rel="noopener noreferrer">
+        <img class="height_pictures" href="./resources/img/image4.jpg" title="Рисунка на Христо Ботев"
+            src="./resources/img/image4.jpg" alt="">
+    </a>
+    <hr />
+    <p title="Основен текст">Рисунки на друга тематика:</p>
+    <button type="buttоn" id="increase" onclick="zoomin()">Увеличи картинката</button>
+    <button type="buttоn" id="decrease" onclick="zoomout()">Намали картинката</button>
+    <button type="buttоn" id="reset" onclick="reset()">Нормализирай картинката</button>
+    <br />
+    <br />
+    <a href="./resources/img/image5.jpg" target="_blank" rel="noopener noreferrer">
+        <img id="big-photo" title="Рисунка Красавицата и Звяра" src="./resources/img/image5.jpg" alt="">
+    </a>
+    <br />
+    <br />
+    <button type="buttоn" id="increase" onclick="zoominAllVertical()">Увеличи всички вертикални картинки</button>
+    <button type="buttоn" id="decrease" onclick="zoomoutAllVertical()">Намали всички вертикални картинки</button>
+    <button type="buttоn" id="reset" onclick="resetAllVertical()">Нормализирай всички вертикални картинки</button>
+    <br />
+    <br />
+    <a href="./resources/img/image6.jpg" target="_blank" rel="noopener noreferrer">
+        <img class="weight_pictures" href="./resources/img/image6.jpg" title="Рисунка на фантастична жена"
+            src="./resources/img/image6.jpg" alt="">
+    </a>
+    <a href="./resources/img/image7.jpg" target="_blank" rel="noopener noreferrer">
+        <img class="weight_pictures" href="./resources/img/image7.jpg" title="Рисунка на змей"
+            src="./resources/img/image7.jpg" alt="">
+    </a>
+    <a href="./resources/img/image8.jpg" target="_blank" rel="noopener noreferrer">
+        <img class="weight_pictures" href="./resources/img/image8.jpg" title="Рисунка на змей"
+            src="./resources/img/image8.jpg" alt="">
+    </a>
+    <br />
+    <hr />
+    <br />
+    <div>
+        <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self"
+            rel="noopener noreferrer">Начална страница</a>
+    </div>
+    <br />
+
+    <a class="little_margins" href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">Това е линк към
+        сайт за обучение по програмиране.</a>
+    <span><strong>Отворете линка, ако искате да пробвате HTML.</strong></span>
+    <br />
+    <br />
+    <a class="little_margins" href="https://edu.uni-sz.bg" target="_blank" rel="noopener noreferrer">Това е линк към
+        университета, който ме научи.</a>
+    <span><strong>Отворете линка, ако искате да се запишете.</strong></span>
+    <hr />
+    <br />
     <p style="text-align:right;" title="Основен текст">Автор на сайта: Владислав Недялков Иванов</p>
     <script src="./index.js"></script>
-    </body>
+</body>
+
 </html>
