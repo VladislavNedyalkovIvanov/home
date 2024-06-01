@@ -40,7 +40,7 @@ body{background-color:black; user-select:none;} /*цвят на background     #
         margin-left: 5px;
         border-style: solid;
         border-radius: 5px;
-        border-color: lawngreen;
+        border-color: limegreen;
 }
 div{
    background-color:black;
@@ -92,10 +92,10 @@ img {
     }
 
     #increase, #decrease, #reset{
-        background-color:black;
-        color:white;
-        border-width: 4px;
-        border-color: green;
+        background-color: rgb(79, 79, 79);
+        color:whitesmoke;
+        border-width: 5px;
+        border-color: silver;
         border-style: solid;
-        border-radius: 20%;
+        border-radius: 7px;
     }
