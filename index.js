@@ -89,19 +89,20 @@ function reset() {
         myImage.style.height = (imgHeight = 500) + "px";
 }
 
-var boundary = document.getElementsByClassName("middle_margins")[0];
 
-// Запазваме оригиналния стил
-var originalColor = window.getComputedStyle(boundary).color;
 
-// При преминаване с показалеца
-boundary.addEventListener("mouseover", function () {
-  this.style.color = 'green';
-});
+var boundaries = document.getElementsByClassName("middle_margins");
 
-// При премахване на показалеца
-boundary.addEventListener("mouseout", function () {
-  this.style.color = originalColor;
+Array.from(boundaries).forEach(function(boundary) {
+  var originalColor = boundary.style.color || window.getComputedStyle(boundary).color;
+
+  boundary.addEventListener("mouseover", function () {
+    this.style.color = 'green';
+  });
+
+  boundary.addEventListener("mouseout", function () {
+    this.style.color = originalColor;
+  });
 });
 
 
