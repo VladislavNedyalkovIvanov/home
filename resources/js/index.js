@@ -91,9 +91,9 @@ function reset() {
 
 
 
-var boundaries = document.getElementsByClassName(".middle_margins, .little_margins");
+var boundaries = document.querySelectorAll(".middle_margins, .little_margins");
 
-Array.from(boundaries).forEach(function(boundary) {
+boundaries.forEach(function(boundary) {
   var originalColor = boundary.style.color || window.getComputedStyle(boundary).color;
 
   boundary.addEventListener("mouseover", function () {
@@ -104,5 +104,4 @@ Array.from(boundaries).forEach(function(boundary) {
     this.style.color = originalColor;
   });
 });
-
 
