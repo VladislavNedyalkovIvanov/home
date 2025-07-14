@@ -90,7 +90,18 @@ function reset() {
 }
 
 var boundary = document.getElementsByClassName("middle_margins")[0];
-var mouseOverFunction = function () {
-this.style.color = 'green'; // your colour change
-};
-boundary.onmouseover = mouseOverFunction;
+
+// Запазваме оригиналния стил
+var originalColor = window.getComputedStyle(boundary).color;
+
+// При преминаване с показалеца
+boundary.addEventListener("mouseover", function () {
+  this.style.color = 'green';
+});
+
+// При премахване на показалеца
+boundary.addEventListener("mouseout", function () {
+  this.style.color = originalColor;
+});
+
+
