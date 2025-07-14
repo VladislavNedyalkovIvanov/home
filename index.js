@@ -88,3 +88,9 @@ function reset() {
     if (imgHeight != 500)
         myImage.style.height = (imgHeight = 500) + "px";
 }
+
+var boundary = document.getElementsByClassName("middle_margins")[0];
+var mouseOverFunction = function () {
+this.style.color = 'green'; // your colour change
+};
+boundary.onmouseover = mouseOverFunction;
