@@ -40,11 +40,15 @@
     2. Предварителни настройки за портове в защитната стена:
     
     Настройки в Router (https://10.0.0.1):
-                                        (замени с вътрешен IP адрес на рутера)      (замени 1.1.1.1 с реалния външен IP адрес и 543 и 545 с реалния външен порт)
+
+                                    (замени с вътрешен IP адрес на рутера)      (замени 1.1.1.1 с реалния външен IP адрес и 543 и 545 с реалния външен порт)
+    _________________________________________________________________________________________________________________________
     Name:               Server Type:            IP Address:         Ports:                      Public IP Address:	
+    _________________________________________________________________________________________________________________________
     SFTP_Server         FTP Server              10.0.0.2            TCP:3434                    1.1.1.1:543
     SFTP_Server_550     FTP Server              10.0.0.2            TCP:550                     1.1.1.1:544
-    FtpServer		    FTP Server              10.0.0.2            TCP:50093-50197             1.1.1.1
+    FtpServer           FTP Server              10.0.0.2            TCP:50093-50197             1.1.1.1
+    _________________________________________________________________________________________________________________________
     
     
     
@@ -53,22 +57,22 @@
     
     Inbound Rules:
     ____________________________________________________________________________________________________________________________________________________
-    Name:                         Profile           Action      Program     Local Address   Remote Address      Protocol    Local Port      Remote Ports
+    Name:                         Profile        Action      Program     Local Address   Remote Address      Protocol    Local Port      Remote Ports
     ____________________________________________________________________________________________________________________________________________________
-    SFTP Port                     All               Allow       Any         Any             Any                 TCP         3434            Any
-    SFTP UDP                      All               Allow       Any         Any             Any                 UDP         3434            Any
-    NTP from NAT forwarding       All               Allow       Any         Any             Any                 TCP         50093-50197     Any
-    NTP from NAT forwarding UDP   All               Allow       Any         Any             Any                 UDP         50093-50197     Any
+    SFTP Port                     All            Allow       Any         Any             Any                 TCP         3434            Any
+    SFTP UDP                      All            Allow       Any         Any             Any                 UDP         3434            Any
+    NTP from NAT forwarding       All            Allow       Any         Any             Any                 TCP         50093-50197     Any
+    NTP from NAT forwarding UDP   All            Allow       Any         Any             Any                 UDP         50093-50197     Any
     ____________________________________________________________________________________________________________________________________________________
     
 
     Outbound Rules:
     ____________________________________________________________________________________________________________________________________________________
-    Name:                         Profile           Action      Program     Local Address   Remote Address      Protocol    Local Port      Remote Ports
+    Name:                         Profile        Action      Program     Local Address   Remote Address      Protocol    Local Port      Remote Ports
     ____________________________________________________________________________________________________________________________________________________
-    SFTP Tcp port                 All               Allow       Any         Any             Any                 TCP         3434            Any
-    SFTP Udp port                 All               Allow       Any         Any             Any                 UDP         3434            Any
-    NTP from NAT forwarding       All               Allow       Any         Any             Any                 TCP         50093-50197     Any
+    SFTP Tcp port                 All            Allow       Any         Any             Any                 TCP         3434            Any
+    SFTP Udp port                 All            Allow       Any         Any             Any                 UDP         3434            Any
+    NTP from NAT forwarding       All            Allow       Any         Any             Any                 TCP         50093-50197     Any
     ____________________________________________________________________________________________________________________________________________________
     
     
