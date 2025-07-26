@@ -24,9 +24,10 @@
         <pre>
     1. Обща информация за домейна:
 
-    Главен домейн контролер:		    10.0.0.2			(DC-SERVER)
-    Резервен домейн контролер:		    10.0.0.3			(DC1-SERVER)
-    Споделена директория в мрежата:	    10.0.0.4/5		        (SHARES) 	(NAS drive QNAP, чиито файлови директории се управляват от домейна)
+    Главен домейн контролер:            0.0.0.2         (DC-SERVER)
+    Резервен домейн контролер:          10.0.0.3        (DC1-SERVER)
+    Споделена директория в мрежата:     10.0.0.4/5      (SHARES)        
+                                        (NAS drive QNAP, чиито файлови директории се управляват от домейна)
     
     
     Управлява се през Remote desktop (10.0.0.2) с потребител:
@@ -52,14 +53,14 @@
     10.0.0.2 (Главен домейн контролер) - Активирани роли:
     - Active Directory Domain Services (ADDS)
     - DHCP:
-        pool: 			10.0.0.10 - 10.0.0.200
-        scope options:		
-        003 Router:  		10.0.0.1	
-        004 Time Server:	10.0.0.2
-        005 Name Servers:	10.0.0.2; 10.0.0.3
-        006 DNS Servers:	10.0.0.2
-        015 Domain name:	primarydomain.com
-    - Domain name services (DNS)
+        pool:               10.0.0.10 - 10.0.0.200
+        scope options:      
+        003 Router:         10.0.0.1	
+        004 Time Server:    10.0.0.2
+        005 Name Servers:   10.0.0.2; 10.0.0.3
+        006 DNS Servers:    10.0.0.2
+        015 Domain name:    primarydomain.com
+    - Domain name services  (DNS)
     - File Services;
     
     Domain naming operation master
@@ -84,7 +85,8 @@
 
     *Задължително да се изпълни, преди да се стартира dcpromo за премахване на сървър:
     
-    Active Directory Sites and Services -> Sites -> Default-First-Site-Name -> Servers -> Избираме сървъра, който ще премахваме -> Properties 
+    Active Directory Sites and Services -> Sites -> Default-First-Site-Name -> Servers -?>
+    -> Избираме сървъра, който ще премахваме -> Properties 
     -> Object -> [ ] Protect object from accidental deletion					
     (премахва се отметката, която пази от инцидентно изтриване или премахване на домейн контролера)
     
@@ -118,14 +120,14 @@
     
     Computer Configuration -> Policies -> Administrative Templates: 
         -> Policy definitions -> Windows Components -> Remote Desktop services -> Remote Desktop Sesion Host -> Connections:
-                    Allow users to connect remotely by using Remote Desktop services: 	Enabled
+            Allow users to connect remotely by using Remote Desktop services: 	Enabled
 
     
     - За да проработи Remote desktop за domain user, различен от администратор:
     
     Добавя се ръчно на самият компютър, който ще се управлява дистанционно от следното меню:
-    This PC -> Properties -> System -> Advanced system settings -> Remote -> Select Users -> Add...
-    test.testov(примерен потребител) -> OK 
+    This PC -> Properties -> System -> Advanced system settings -> Remote -> Select Users -> Add... ->
+            ->test.testov(примерен потребител) -> OK 
     *Това можа да се извърши и през Remote desktop, логвайки се с администраторски акаунт. Удобно е, понеже не се налага физическо посещение на компютъра. 
     
     - *2 вариант, който не препоръчвам, поради съображения за сигурност - добавяне на самият потребител от сървъра в групата Remote desktop users.
@@ -152,9 +154,9 @@
     *От тук може да се забрани употребата на флаш драйв устройства (към момента не е конфигурирано):
     
     Computer Configuration -> Policies -> Administrative Templates: Policy definitions -> System -> Removable Storage Access:
-    Removable Disks: Deny execute access
-    Removable Disks: Deny read access
-    Removable Disks: Deny write access
+    Removable Disks:        Deny execute access
+    Removable Disks:        Deny read access
+    Removable Disks:        Deny write access
     All Removable Storages: Deny all access;
     
     
