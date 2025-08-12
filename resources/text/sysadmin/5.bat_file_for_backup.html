@@ -32,8 +32,8 @@ ______________________________________________________________________
     @echo off                                                        |
     chcp 65001                                                       |  - задава кодировка за символи тип кирилица
                                                                      |
-    set sourceFolder="D:\Documents"                                  |  - sourceFolder е име на променлива, а " " примерен източник, който да бъде копиран
-    set backupDestination="Documents"                                |  - backupDestination е име на променлива, а " " примерна дестинация, където да се постави
+    set "sourceFolder=D:\Documents"                                  |  - sourceFolder е име на променлива, а " " примерен източник за копиране
+    set "backupDestination=Documents"                                |  - backupDestination е име на променлива, а " " примерна дестинация за поставяне
     if not exist %backupDestination% mkdir %backupDestination%       |  - Създаване на папка за дестинацията на бекъпа
                                                                      |  
     robocopy %sourceFolder% %backupDestination% /s /xo /z /np        |  - ако има добавена /mir ще изтрива от дестинацията всичко, 
@@ -129,8 +129,8 @@ ____________________________________________________________________
     @echo off                                                      |
     chcp 65001                                                     |    - задава кодировка за символи тип кирилица 
                                                                    |
-    set "sourceFolder=D:\Documents"                                |    - sourceFolder е име на променлива, а " " примерен източник, който да бъде копиран
-    set "backupDestination=Documents"                              |    - backupDestination е име на променлива, а " " примерна дестинация, където да се постави
+    set "sourceFolder=D:\Documents"                                |    - sourceFolder е име на променлива, а " " примерен източник за копиране
+    set "backupDestination=Documents"                              |    - backupDestination е име на променлива, а " " примерна дестинация за поставяне
     if not exist %backupDestination% mkdir %backupDestination%     |    - Създаване на папка за дестинацията на бекъпа (ако липсва такава)
                                                                    |
     xcopy %sourceFolder% %backupDestination% /D /E /C /H /R /Y /K  |    - xcopy команда със зададени параметри, за които има повече информация отдолу 
