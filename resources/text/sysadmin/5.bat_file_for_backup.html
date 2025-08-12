@@ -187,48 +187,48 @@ xcopy %име на променлива на ресурса% %име на про
 - /J — Копира с небуфериран вход/изход — препоръчително за големи файлове.
 
 
-_________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________
                     Трети вариант за копиране на всички важни файлове от потребителска директория и диск D: 
 
             1. Отваряте Notepad и добавяте следните команти:
-_________________________________________________________________________
-@echo off                                                               |
-chcp 65001                                                              |
-                                                                        |
-set "Desktop=%userprofile%\Desktop"                                     |   - ресурс за бекъп: потребителски профил - Работен плот
-set "backupDesktop=\Backup\Files\%username%\Desktop"                    |   - дестинация на бекъп - външен носител -> папка Backup\Files\User\Desktop
-set "Documents=%userprofile%\Documents"                                 |   - същото се прави и за папките -> Documents
-set "backupDocuments=\Backup\Files\%username%\Documents"                |   
-set "Downloads=%userprofile%\Downloads"                                 |   - Downloads
-set "backupDownloads=\Backup\Files\%username%\Downloads"                |
-set "Pictures=%userprofile%\Pictures"                                   |   - Pictures
-set "backupPictures=\Backup\Files\%username%\Pictures"                  |
-set "DiskD=D:"                                                          |   - Disk D:
-set "backupDiskD=\Backup\Files\DiskD"                                   |   - Всички папки се бекъпват на външен носител в папка Backup и подпапки
-                                                                        |   
-if not exist %backupDesktop% mkdir %backupDesktop%                      |   - Ако няма папка върху дестинацията на Backup я създава
-robocopy %Desktop% %backupDesktop% /s /xo /z /np                        |   - копиране на новите/променените файлове
-if not exist %backupDocuments% mkdir %backupDocuments%                  |
-robocopy %Documents% %backupDocuments% /s /xo /z /np                    |
-if not exist %backupDownloads% mkdir %backupDownloads%                  |
-robocopy %Downloads% %backupDownloads% /s /xo /z /np                    |
-if not exist %backupPictures% mkdir %backupPictures%                    |
-robocopy %Pictures% %backupPictures% /s /xo /z /np                      |
-if not exist %backupDiskD% mkdir %backupDiskD%                          |
-robocopy %DiskD% %backupDiskD% /s /xo /z /np                            |
-                                                                        |
-echo Копирането на файлове приключи успешно!                            |
-echo.                                                                   |
-echo Вашите резервни копия са в папките:                                |
-echo.                                                                   |
-echo %~d0%backupDesktop%                                                |   - %~d0 - показва директорията на бекъп 
-echo %~d0%backupDocuments%                                              |   - %името на променливата% - местоположение на папката
-echo %~d0%backupDownloads%                                              |
-echo %~d0%backupPictures%                                               |
-echo %~d0%backupDiskD%                                                  |
-echo.                                                                   |
-pause                                                                   |
-________________________________________________________________________|
+_____________________________________________________________________________
+    @echo off                                                               |
+    chcp 65001                                                              |
+                                                                            |
+    set "Desktop=%userprofile%\Desktop"                                     |   - ресурс за бекъп: потребителски профил - Работен плот
+    set "backupDesktop=\Backup\Files\%username%\Desktop"                    |   - дестинация на бекъп - външен носител -> папка Backup\Files\User\Desktop
+    set "Documents=%userprofile%\Documents"                                 |   - същото се прави и за папките -> Documents
+    set "backupDocuments=\Backup\Files\%username%\Documents"                |   
+    set "Downloads=%userprofile%\Downloads"                                 |   - Downloads
+    set "backupDownloads=\Backup\Files\%username%\Downloads"                |
+    set "Pictures=%userprofile%\Pictures"                                   |   - Pictures
+    set "backupPictures=\Backup\Files\%username%\Pictures"                  |
+    set "DiskD=D:"                                                          |   - Disk D:
+    set "backupDiskD=\Backup\Files\DiskD"                                   |   - Всички папки се бекъпват на външен носител в папка Backup и подпапки
+                                                                            |   
+    if not exist %backupDesktop% mkdir %backupDesktop%                      |   - Ако няма папка върху дестинацията на Backup я създава
+    robocopy %Desktop% %backupDesktop% /s /xo /z /np                        |   - копиране на новите/променените файлове
+    if not exist %backupDocuments% mkdir %backupDocuments%                  |
+    robocopy %Documents% %backupDocuments% /s /xo /z /np                    |
+    if not exist %backupDownloads% mkdir %backupDownloads%                  |
+    robocopy %Downloads% %backupDownloads% /s /xo /z /np                    |
+    if not exist %backupPictures% mkdir %backupPictures%                    |
+    robocopy %Pictures% %backupPictures% /s /xo /z /np                      |
+    if not exist %backupDiskD% mkdir %backupDiskD%                          |
+    robocopy %DiskD% %backupDiskD% /s /xo /z /np                            |
+                                                                            |
+    echo Копирането на файлове приключи успешно!                            |
+    echo.                                                                   |
+    echo Вашите резервни копия са в папките:                                |
+    echo.                                                                   |
+    echo %~d0%backupDesktop%                                                |   - %~d0 - показва директорията на бекъп 
+    echo %~d0%backupDocuments%                                              |   - %името на променливата% - местоположение на папката
+    echo %~d0%backupDownloads%                                              |
+    echo %~d0%backupPictures%                                               |
+    echo %~d0%backupDiskD%                                                  |
+    echo.                                                                   |
+    pause                                                                   |
+____________________________________________________________________________|
 
             2. Сега записваме файла 
             - Файл/File-> Записване като/Save as -> Задаваме име и променяме разширението .txt на .bat
@@ -267,10 +267,10 @@ ________________________________________________________________________|
 
             Готово!
 
-______________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________________________
 
                         Скрипт за преместване на файлове от даден тип от папка и подпапки в една целева папка
-______________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________________________
 
                     Вариант 1  - с писане на тип файлове, които да се преместят
 
@@ -280,41 +280,41 @@ ________________________________________________________________________________
             1. Отваряте Notepad и добавяте следните команти:
 
 
-________________________________________________________________________________________
-@echo off                                                                              |
-chcp 65001                                                                             |
-                                                                                       |
-set "destinationFolder=D:\FilesByType"                                                 |    - задаване на целева папка
-                                                                                       |
-echo Въведи типа на файловете (например:  .jpg .docx .mp3 .mp4 .mkv .mov .avi и т.н.)  |    - echo позволява извеждане на текст върху конзолата
-echo.                                                                                  |    - echo. слага нов празен ред върхо конзолата
-echo Ако не сте сигурни дали е .doc или .docx, напишете:                               |
-echo .doc* и ще премести всичко, което започва с .doc                                  |
-echo.                                                                                  |
-                                                                                       |
-set /p "fileType=Въведи разширението: "                                                |    - set запазва стойност, /p указва, че ще бъде въведена,
-                                                                                       |     fileType= - име на променливата, всичко след = е текст, 
-echo Търсене на файлове от тип %fileType%...                                           |     който подканя потребителя за въвеждане
-                                                                                       |
-for /r %%a in (*%fileType%) do (                                                       |    - for цикъл за обхождане на файловете в папките;
-    move /-Y "%%a" "%destinationFolder%"                                               |    - преместване на всички съвпадения в папката - дестинация
-)                                                                                      |
-                                                                                       |
-echo.                                                                                  |
-echo Преместването на файлове от тип %fileType% завърши успешно.                       |    - текст, който се показва въхру конзолата
-echo Намират се в следната директория:                                                 |
-echo.                                                                                  |
-echo %~d0%destinationFolder%                                                           |
-echo.                                                                                  |
-pause                                                                                  |
-_______________________________________________________________________________________|
+____________________________________________________________________________________________
+    @echo off                                                                              |
+    chcp 65001                                                                             |
+                                                                                           |
+    set "destinationFolder=D:\FilesByType"                                                 |    - задаване на целева папка
+                                                                                           |
+    echo Въведи типа на файловете (например:  .jpg .docx .mp3 .mp4 .mkv .mov .avi и т.н.)  |    - echo позволява извеждане на текст върху конзолата
+    echo.                                                                                  |    - echo. слага нов празен ред върхо конзолата
+    echo Ако не сте сигурни дали е .doc или .docx, напишете:                               |
+    echo .doc* и ще премести всичко, което започва с .doc                                  |
+    echo.                                                                                  |
+                                                                                           |
+    set /p "fileType=Въведи разширението: "                                                |    - set запазва стойност, /p указва, че ще бъде въведена,
+                                                                                           |     fileType= - име на променливата, всичко след = е текст, 
+    echo Търсене на файлове от тип %fileType%...                                           |     който подканя потребителя за въвеждане
+                                                                                           |
+    for /r %%a in (*%fileType%) do (                                                       |    - for цикъл за обхождане на файловете в папките;
+        move /-Y "%%a" "%destinationFolder%"                                               |    - преместване на всички съвпадения в папката - дестинация
+    )                                                                                      |
+                                                                                           |
+    echo.                                                                                  |
+    echo Преместването на файлове от тип %fileType% завърши успешно.                       |    - текст, който се показва въхру конзолата
+    echo Намират се в следната директория:                                                 |
+    echo.                                                                                  |
+    echo %~d0%destinationFolder%                                                           |
+    echo.                                                                                  |
+    pause                                                                                  |
+___________________________________________________________________________________________|
 
             2. Сега записваме файла 
             - Файл/File-> Записване като/Save as -> Задаваме име и променяме разширението .txt на .bat
             - за да работи коректно копираме/преместваме .bat файлчето в папката, от която ще местим файловете
 
 
-__________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________
 
                                 Вариант 2  - с избор на тип файлове, които да се преместят
 
@@ -323,65 +323,65 @@ ________________________________________________________________________________
 
             1. Отваряте Notepad и добавяте следните команти:
 
-________________________________________________________________________
-@echo off                                                              |
-chcp 65001                                                             |
-                                                                       |
-:: Задаване на целева папка                                            |
-set "destinationFolder=D:\FilesByType"                                 |
-if not exist %destinationFolder% mkdir %destinationFolder%             |
-                                                                       |
-:: Показване на меню                                                   |
-echo Избери тип файлове за преместване:                                |
-echo.                                                                  |
-echo 1 - .jpg           снимки                                         |
-echo 2 - .png           снимки                                         |
-echo 3 - .doc/docx      документи                                      |
-echo 4 - .pdf           документи                                      |
-echo 5 - .mp3           музика                                         |
-echo 6 - .wav           музика                                         |
-echo 7 - .mp4           видео                                          |
-echo 8 - .mkv           видео                                          |
-echo 9 - .avi           видео                                          |
-echo 10 - .xls/xlsx     таблица                                        |
-echo.                                                                  |
-                                                                       |
-set /p "choice=Въведи номер (1-10): "                                  |    - set запазване на стойност, /p въвеждане от потребителя, 
-                                                                       |    choice= променлива, която присвоява въведена стойност
-:: Определяне на типа според избора                                    |
-if "%choice%"=="1" set "fileType=.jpg"                                 |    - if проверки, които задават стойност на fileType, 
-if "%choice%"=="2" set "fileType=.png"                                 |    според въведеното число
-if "%choice%"=="3" set "fileType=.doc*"                                |
-if "%choice%"=="4" set "fileType=.pdf"                                 |
-if "%choice%"=="5" set "fileType=.mp3"                                 |
-if "%choice%"=="6" set "fileType=.wav"                                 |
-if "%choice%"=="7" set "fileType=.mp4"                                 |
-if "%choice%"=="8" set "fileType=.mkv"                                 |
-if "%choice%"=="9" set "fileType=.avi"                                 |
-if "%choice%"=="10" set "fileType=.xls*"                               |
-                                                                       |
-:: Проверка дали е избрано нещо                                        |
-if not defined fileType (                                              |    - ако не е избрана коректна стойност дава невалиден избор
-    echo Невалиден избор. Скриптът ще се затвори.                      |
-    pause                                                              |
-    exit /b                                                            |
-)                                                                      |
-                                                                       |
-echo Търсене на файлове от тип %fileType%...                           |    - текст, който показва файловият тип, който се търси
-                                                                       |
-:: Обхождане и преместване                                             |
-for /r %%a in (*%fileType%) do (                                       |    - for цикъл за обхождане на папките
-    move /-Y "%%a" "%destinationFolder%"                               |    - преместване на всички съвпадения в папката - дестинация
-)                                                                      |
-                                                                       |
-echo.                                                                  |
-echo Преместването на файлове от тип %fileType% завърши успешно.       |    - информационен текст
-echo Намират се в следната директория:                                 |
-echo.                                                                  |
-echo %~d0%destinationFolder%                                           |
-echo.                                                                  |
-pause                                                                  |
-_______________________________________________________________________|
+____________________________________________________________________________
+    @echo off                                                              |
+    chcp 65001                                                             |
+                                                                           |
+    :: Задаване на целева папка                                            |
+    set "destinationFolder=D:\FilesByType"                                 |
+    if not exist %destinationFolder% mkdir %destinationFolder%             |
+                                                                           |
+    :: Показване на меню                                                   |
+    echo Избери тип файлове за преместване:                                |
+    echo.                                                                  |
+    echo 1 - .jpg           снимки                                         |
+    echo 2 - .png           снимки                                         |
+    echo 3 - .doc/docx      документи                                      |
+    echo 4 - .pdf           документи                                      |
+    echo 5 - .mp3           музика                                         |
+    echo 6 - .wav           музика                                         |
+    echo 7 - .mp4           видео                                          |
+    echo 8 - .mkv           видео                                          |
+    echo 9 - .avi           видео                                          |
+    echo 10 - .xls/xlsx     таблица                                        |
+    echo.                                                                  |
+                                                                           |
+    set /p "choice=Въведи номер (1-10): "                                  |    - set запазване на стойност, /p въвеждане от потребителя, 
+                                                                           |    choice= променлива, която присвоява въведена стойност
+    :: Определяне на типа според избора                                    |
+    if "%choice%"=="1" set "fileType=.jpg"                                 |    - if проверки, които задават стойност на fileType, 
+    if "%choice%"=="2" set "fileType=.png"                                 |    според въведеното число
+    if "%choice%"=="3" set "fileType=.doc*"                                |
+    if "%choice%"=="4" set "fileType=.pdf"                                 |
+    if "%choice%"=="5" set "fileType=.mp3"                                 |
+    if "%choice%"=="6" set "fileType=.wav"                                 |
+    if "%choice%"=="7" set "fileType=.mp4"                                 |
+    if "%choice%"=="8" set "fileType=.mkv"                                 |
+    if "%choice%"=="9" set "fileType=.avi"                                 |
+    if "%choice%"=="10" set "fileType=.xls*"                               |
+                                                                           |
+    :: Проверка дали е избрано нещо                                        |
+    if not defined fileType (                                              |    - ако не е избрана коректна стойност дава невалиден избор
+        echo Невалиден избор. Скриптът ще се затвори.                      |
+        pause                                                              |
+        exit /b                                                            |
+    )                                                                      |
+                                                                           |
+    echo Търсене на файлове от тип %fileType%...                           |    - текст, който показва файловият тип, който се търси
+                                                                           |
+    :: Обхождане и преместване                                             |
+    for /r %%a in (*%fileType%) do (                                       |    - for цикъл за обхождане на папките
+        move /-Y "%%a" "%destinationFolder%"                               |    - преместване на всички съвпадения в папката - дестинация
+    )                                                                      |
+                                                                           |
+    echo.                                                                  |
+    echo Преместването на файлове от тип %fileType% завърши успешно.       |    - информационен текст
+    echo Намират се в следната директория:                                 |
+    echo.                                                                  |
+    echo %~d0%destinationFolder%                                           |
+    echo.                                                                  |
+    pause                                                                  |
+___________________________________________________________________________|
 
             2. Сега записваме файла 
             - Файл/File-> Записване като/Save as -> Задаваме име и променяме разширението .txt на .bat
