@@ -195,8 +195,8 @@ _____________________________________________________________________________
     @echo off                                                               |
     chcp 65001                                                              |
                                                                             |
-    set "Desktop=%userprofile%\Desktop"                                     |   - ресурс за бекъп: потребителски профил - Работен плот
-    set "backupDesktop=%~d0\Backup\Files\%username%\Desktop"                |   - дестинация на бекъп - външен носител -> папка Backup\Files\User\Desktop
+    set "Desktop=%userprofile%\Desktop"                                     |   - ресурс за бекъп: %userprofile% - потребителски профил -> Работен плот
+    set "backupDesktop=%~d0\Backup\Files\%username%\Desktop"                |   - дестинация на бекъп %~d0 - буква на устр. -> папка Backup\Files\User\Desktop
     set "Documents=%userprofile%\Documents"                                 |   - същото се прави и за папките -> Documents
     set "backupDocuments=%~d0\Backup\Files\%username%\Documents"            |   - %~d0    команда, която връща стойност - буквата на устройство/дисков дял
     set "Downloads=%userprofile%\Downloads"                                 |   - Downloads
