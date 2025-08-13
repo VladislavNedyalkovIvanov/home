@@ -196,15 +196,15 @@ _____________________________________________________________________________
     chcp 65001                                                              |
                                                                             |
     set "Desktop=%userprofile%\Desktop"                                     |   - ресурс за бекъп: потребителски профил - Работен плот
-    set "backupDesktop=\Backup\Files\%username%\Desktop"                    |   - дестинация на бекъп - външен носител -> папка Backup\Files\User\Desktop
+    set "backupDesktop=%~d0\Backup\Files\%username%\Desktop"                |   - дестинация на бекъп - външен носител -> папка Backup\Files\User\Desktop
     set "Documents=%userprofile%\Documents"                                 |   - същото се прави и за папките -> Documents
-    set "backupDocuments=\Backup\Files\%username%\Documents"                |   
+    set "backupDocuments=%~d0\Backup\Files\%username%\Documents"            |   - %~d0    команда, която връща стойност - буквата на устройство/дисков дял
     set "Downloads=%userprofile%\Downloads"                                 |   - Downloads
-    set "backupDownloads=\Backup\Files\%username%\Downloads"                |
+    set "backupDownloads=%~d0\Backup\Files\%username%\Downloads"            |
     set "Pictures=%userprofile%\Pictures"                                   |   - Pictures
-    set "backupPictures=\Backup\Files\%username%\Pictures"                  |
+    set "backupPictures=%~d0\Backup\Files\%username%\Pictures"              |
     set "DiskD=D:\Documents"                                                |   - D:\Documents *Ако изберем целия диск D:\ папката в дестинация става невидима
-    set "backupDiskD=\Backup\Files\DiskD"                                   |   - Всички папки се бекъпват на външен носител в папка Backup и подпапки
+    set "backupDiskD=%~d0\Backup\Files\DiskD\Documents"                     |   - Всички папки се бекъпват на външен носител в папка Backup и подпапки
                                                                             |   
     if not exist %backupDesktop% mkdir %backupDesktop%                      |   - Ако няма папка върху дестинацията на Backup я създава
     robocopy %Desktop% %backupDesktop% /s /xo /z /np                        |   - копиране на новите/променените файлове
