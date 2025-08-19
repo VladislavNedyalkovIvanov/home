@@ -128,12 +128,12 @@ ________________________________________________________________________________
             
   <label>Въведи десетично число:</label>
   <input type="number" id="decimalInput">
-  <button onclick="convertToBinary()">В двоична</button>
+  <button class="little_margins" onclick="convertToBinary()">В двоична</button>
   <p id="binaryResult" class="indented"></p>
 
   <label>Въведи двоично число:</label>
   <input type="text" id="binaryInput">
-  <button onclick="convertToDecimal()">В десетична</button>
+  <button class="little_margins" onclick="convertToDecimal()">В десетична</button>
   <p id="decimalResult" class="indented"></p>
 
 _____________________________________________________________________________________________________________________________
@@ -209,8 +209,8 @@ ___________|______________|_______________|_________________|___________________
   <label>Въведи двоично число 2:</label>
   <input type="text" id="binary2" placeholder="">
   <br>
-  <button onclick="calculate('add')">Събиране</button>
-  <button onclick="calculate('subtract')">Изваждане</button>
+  <button class="little_margins" onclick="calculate('add')">Събиране</button>
+  <button class="little_margins" onclick="calculate('subtract')">Изваждане</button>
 
   <div id="result"></div>
 
@@ -387,7 +387,7 @@ ________________________________________________________________________________
         <label>G: <input type="number" id="g" min="0" max="255" value="255"></label>
         <label>B: <input type="number" id="b" min="0" max="255" value="255"></label>
         <br>
-        <button onclick="applyColor()">Покажи цвят</button>
+        <button class="little_margins" onclick="applyColor()">Покажи цвят</button>
 
         <div id="colorBox"></div>
 
