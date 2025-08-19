@@ -91,17 +91,60 @@ function reset() {
 
 
 
+const rateBGNtoEUR = 0.511292;   // 1 лв = 0.511292 €
+const rateEURtoBGN = 1.95583;    // 1 € = 1.95583 лв
+
+// Конвертиране от лева към евро
+function convertBGNtoEUR(amountBGN) {
+    return amountBGN * rateBGNtoEUR;
+}
+
+// Конвертиране от евро към лева
+function convertEURtoBGN(amountEUR) {
+    return amountEUR * rateEURtoBGN;
+}
+
+// Основна функция за обработка на лева в евро и обратното
+function convertCurrency() {
+    const amount = parseFloat(document.getElementById('amount').value);
+    const direction = document.getElementById('direction').value;
+    const resultDiv = document.getElementById('result');
+
+    if (isNaN(amount) || amount < 0) {
+        resultDiv.textContent = "Моля, въведи валидна положителна сума.";
+        resultDiv.style.color = "#cc0000"; // червен текст за грешка
+        return;
+    }
+
+    let converted;
+    let output;
+
+    if (direction === "bgnToEur") {
+        converted = convertBGNtoEUR(amount);
+        output = `${amount.toFixed(2)} лева = ${converted.toFixed(2)} евро  (приблизителна стойност)`;
+    } else {
+        converted = convertEURtoBGN(amount);
+        output = `${amount.toFixed(2)} евро = ${converted.toFixed(2)} лева  (приблизителна стойност)`;
+    }
+
+    resultDiv.textContent = output;
+}
+
+
+
+
+
 var boundaries = document.querySelectorAll(".middle_margins, .little_margins, .large_margins");
 
-boundaries.forEach(function(boundary) {
-  var originalColor = boundary.style.color || window.getComputedStyle(boundary).color;
+boundaries.forEach(function (boundary) {
+    var originalColor = boundary.style.color || window.getComputedStyle(boundary).color;
 
-  boundary.addEventListener("mouseover", function () {
-    this.style.color = 'green';
-  });
+    boundary.addEventListener("mouseover", function () {
+        this.style.color = 'green';
+    });
 
-  boundary.addEventListener("mouseout", function () {
-    this.style.color = originalColor;
-  });
+    boundary.addEventListener("mouseout", function () {
+        this.style.color = originalColor;
+    });
 });
 
