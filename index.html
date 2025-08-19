@@ -39,13 +39,22 @@
         <a href="6.galery.html" target="_self" rel="noopener noreferrer">
             <button class="middle_margins" type="button">Галерия с мои рисунки</button>
         </a>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <h2 id="freetext">Валутен калкулатор</h2>
+        <input class="little_margins" type="number" id="amount" placeholder="Въведи сума" step="any">
+        <br><br>
+
+        <select class="little_margins" id="direction">
+            <option class="little_margins" value="bgnToEur">Лева → Евро</option>
+            <option class="little_margins" value="eurToBgn">Евро → Лева</option>
+        </select>
+        <br><br>
+
+        <button class="little_margins" onclick="convertCurrency()">Конвертирай</button>
+
+        <div id="result" style="margin-top: 20px; font-size: 20px;"></div>
+
+
+
         <br />
         <br />
         <a class="little_margins" href="https://nau4i.me" target="_blank" rel="noopener noreferrer">Сайт за обучение по
