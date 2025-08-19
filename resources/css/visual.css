@@ -125,3 +125,20 @@ img {
     border-style: solid;
     border-radius: 7px;
 }
+
+#result {
+    position: absolute;
+    color: greenyellow;
+    font-size: 20px;
+    margin-top: 20px;
+    transform: translate(100%, -700%);
+}
+
+#freetext {
+    position: relative;
+    color: greenyellow;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: left;
+    transform: none;
+}
