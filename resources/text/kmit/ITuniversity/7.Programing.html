@@ -2,28 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Езици за програмиране</title>
-    <link rel="stylesheet" type="text/css" href="./css/visual.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Езици за програмиране</title>
+  <link rel="stylesheet" type="text/css" href="./css/visual.css">
 </head>
 
 <body>
-    <div class="cover">
-        <br />
-        <h1>Тема №7 - Езици за програмиране</h1>
-        <br />
-        <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self"
-            rel="noopener noreferrer">Начална страница</a>
-        <br />
-        <br />
-        <a class="middle_margins"
-            href="https://vladislavnedyalkovivanov.github.io/home/resources/text/kmit/1.university.html" target="_self"
-            rel="noopener noreferrer">Връщане към теми за държавен изпит в университета</a>
-        <br />
-        <br />
-        <hr />
-        <pre>
+  <div class="cover">
+    <br />
+    <h1>Тема №7 - Езици за програмиране</h1>
+    <br />
+    <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self"
+      rel="noopener noreferrer">Начална страница</a>
+    <br />
+    <br />
+    <a class="middle_margins"
+      href="https://vladislavnedyalkovivanov.github.io/home/resources/text/kmit/1.university.html" target="_self"
+      rel="noopener noreferrer">Връщане към теми за държавен изпит в университета</a>
+    <br />
+    <br />
+    <hr />
+    <pre>
 
                     Езици за програмиране
 
@@ -85,6 +85,7 @@
 - За всяко едно от условията има две възможности - вярно или невярно; 
 - За всяка една възможност има предвидено действие, което се изпълнява след проверката за истинност; 
 - Един от основните условни оператори е IF;
+
 
           пример:                         if (условие) {
                                             действие 1
@@ -261,6 +262,18 @@ ________________________________________________________________________________
                       }
 
 
+- вложен цикъл имаме когато в един цикъл се изпълнява втори цикъл. 
+- За всяка една итерация (завъртане) на външния се изпълняват всички итерации на вътрешния;
+
+        - Пример за вложен цикъл в C++:
+
+                      for (int i=1; i<=10; i++)
+                      { 
+                        for (int j=1; j<=10; j++)
+                              cout << i << "*" << j
+                              <<"=" << i*j << " ";
+                        cout << endl;
+                      }
 
                 Етапи на съставяне  на дадена програма или приложение 
 
@@ -318,21 +331,26 @@ ________________________________________________________________________________
 - винаги трябва да дава конкретен резултат или обратна връзка, ако не успее да реши задачата;
 - добре е да е максимално ефективен, с по-малко код да се решават максимално количество проблеми;
 
+        <a class="little_margins" href="https://github.com/VladislavNedyalkovIvanov/TrakiaUniversity/blob/home/Homework/Training_1.cpp" target="_self"
+            rel="noopener noreferrer">Пример за решения на задачи в C++</a>
+        <br />
+
+
 
         </pre>
-        <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self"
-            rel="noopener noreferrer">Начална страница</a>
-        <br />
-        <br />
-        <a class="middle_margins"
-            href="https://vladislavnedyalkovivanov.github.io/home/resources/text/kmit/1.university.html" target="_self"
-            rel="noopener noreferrer">Връщане към теми за държавен изпит в университета</a>
-        <br />
-        <br />
-    </div>
-    <hr />
+    <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self"
+      rel="noopener noreferrer">Начална страница</a>
     <br />
-    <script src="./js/index.js"></script>
+    <br />
+    <a class="middle_margins"
+      href="https://vladislavnedyalkovivanov.github.io/home/resources/text/kmit/1.university.html" target="_self"
+      rel="noopener noreferrer">Връщане към теми за държавен изпит в университета</a>
+    <br />
+    <br />
+  </div>
+  <hr />
+  <br />
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
