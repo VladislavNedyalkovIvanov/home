@@ -137,6 +137,15 @@ img {
 .png_files_small {
     height: 30px;
 }
+
+.png_files_60 {
+    height: 60px;
+}
+
+.png_files_big {
+    height: 240px;
+}
+
 .content {
     /* забрана за копиране на текст ??? */
     position: relative;
