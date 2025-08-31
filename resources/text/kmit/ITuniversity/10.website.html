@@ -80,7 +80,50 @@
             <a href="./img/10/1.tag_for_adaptive_screen.png" target="_blank" rel="noopener noreferrer">
             <img class="png_files_small" title="" src="./img/10/1.tag_for_adaptive_screen.png" alt=""> </a>  
       
+
+            
             Hypertext markup language - HTML
+
+- Основна структура на .html файл  - внимание всяка команда започва с < и завършва с >; 
+                                   - всеки отворен таг <> завършва след това със &lt;/> затварящ таг;
+
+            пример:                                   
+
+      &lt;!DOCTYPE html>                                                                       - деклариране, че файлът е HTML5
+      &lt;html>                                                                                - Основен елемент в .html страница - таг 
+
+      &lt;head>                                                                                - Задава начало на head таг
+          &lt;meta charset="UTF-8">
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+          &lt;title> File_name &lt;/title>                                                        - заглавие на сайт в заглавна лента
+          &lt;link rel="stylesheet" type="text/css" href="./css/visual.css">                   - задаване на стил от външен visual.css файл в подпапка с име css
+      &lt;/head>                                                                               - затваряне на head таг с / 
+
+      &lt;body>                                                                                - Задава начало на body таг 
+          &lt;div class="cover">                                                               - div контейнер с клас cover за стилове
+          &lt;br />                                                                            - нов ред 
+          &lt;h1> Име на уеб сайт &lt;/h1>                                                        - име на уебсайт
+          &lt;hr />                                                                            - хоризонтална черта
+          &lt;pre>                                                                             - отварянето таг на команда, която прави формата 
+          Свободен текст.......                                                             - pre дава възможност за въвеждане на форматиран текст
+          &lt;p> Текст в параграф &lt;/p>                                                         - поставяне на параграф
+                                                                                              на текста 1 към 1
+          &lt;input class="little_margins" type="number" id="amount"                           - input позволява въвеждане на текст
+          placeholder="Въведи сума" step="any">                                               id="amount" изпраща въведения текст 
+                                                                                              към функцията;
+          &lt;a href="https://example.com">Отиди към сайта&lt;/a>                                 - линк към външен сайт
+                                                                                            
+
+          &lt;button class="little_margins" onclick="convertCurrency()">Конвертирай /button>   - създава бутон, който извиква функция 
+                                                                                              предварително създадена в .js файл
+
+          &lt;/pre>                                                                            - затваря таг pre за текст 1 към 1
+          &lt;/div>                                                                            - затваряне на таг div
+      &lt;/body>                                                                               - затваряне на таг body 
+
+      &lt;/html>                                                                               - затваряне на таг html
+
+
 
 - Създаване на .html в програмата Visual Studio Code:
       - Отваряне на програмата -> Explorer -> Създаване/добавяне на създадена папка -> New Untitled Text File
@@ -108,7 +151,7 @@ ________________________________________________________________________________
 
 - Свързване на .css файл към .html
       - в head частта се добавя следната команда:
-            link rel="stylesheet" type="text/css" href="./css/visual.css :
+            &lt;link rel="stylesheet" type="text/css" href="./css/visual.css"> :
       <a href="./img/10/3.3_html_css_style_in_head.png" target="_blank" rel="noopener noreferrer">
       <img class="png_files_60" title="" src="./img/10/3.3_html_css_style_in_head.png" alt=""> </a>            
 
@@ -133,11 +176,11 @@ ________________________________________________________________________________
       
 - Свързване на .js файл към .html 
       - в body частта се добавя следната команда (с отварящи скоби в началото: <):
-            script src="./js/index.js"> /script>
+            &lt;script src="./js/index.js">&lt;/script>
       <a href="./img/10/4.3_html_js_script_in_body.png" target="_blank" rel="noopener noreferrer">
       <img class="png_files_60" title="" src="./img/10/4.3_html_js_script_in_body.png" alt=""> </a> 
 
-      - сега всички текстове с имена от изброените класове в .js ще сменят цвета си 
+      - сега всички текстове с имена от изброените класове в .js ще сменят цвета си, 
         когато показалеца на мишката е върху тях. 
       <a href="./img/10/4.4_html_class_names_with_changing_colors.png" target="_blank" rel="noopener noreferrer">
       <img class="png_files_60" title="" src="./img/10/4.4_html_class_names_with_changing_colors.png" alt=""> </a>           
