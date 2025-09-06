@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Жизнен цикъл на уеб сайт</title>
+      <link rel="stylesheet" type="text/css" href="./css/visual.css">
+</head>
+
+<body>
+      <div class="cover">
+            <br />
+            <h1>Тема №10 - Жизнен цикъл на уеб сайт</h1>
+            <br />
+            <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self"
+                  rel="noopener noreferrer">Начална страница</a>
+            <br />
+            <br />
+            <a class="middle_margins"
+                  href="https://vladislavnedyalkovivanov.github.io/home/resources/text/kmit/1.university.html"
+                  target="_self" rel="noopener noreferrer">Връщане към теми за държавен изпит в университета</a>
+            <br />
+            <br />
+            <hr />
+            <pre>
+
+                    Жизнен цикъл на уеб сайт    
+
+            Интернет 
+
+- Internet - International Network;
+- съвкупност от множество по-малки компютърни мрежи свързани помежду си;
+- свързаност между милиони потребители по целия свят;
+- отдалечен достъп до информационни ресурси и услуги;
+- през 1989 г. в Швейцария е представена концепцията  за World Wide Web (www) от Тим Бърнърс-Лий;
+- процесът на развитие, стандартизация и разгръщане на Интернет продължава и до днес;
+- Интернет е по същество е информационна система от взаимно свързани хипертекстови документи;
+- могат да съдържат текст, изображения, видео и други мултимедийни компоненти;
+- преминаването от един документ към друг се осъществява с помощта на хипервръзки;
+- информацията организирана в уеб страници се нарича уеб сайт (обединена мрежа от страници);
+- уеб браузърът е софтуер, който е предназначен за разглеждане на съдържанието на тези уеб страници;
+- URL адресът/уеб адресът е текст, който съдържа местоположението на всяка уеб страница в Интернет;
+- много важна част от Интернет са търсачките, без които би било почти невъзможно откриването на сайтове;
+- тяхната цел е да връщат резултати от URL адреси при търсене на конкретно съдържание;
+- през 1990 г. е създадена първата търсачка в интернет, която индексира само FTP файлове, но не и страници;
+- през 1993 г. е създадена една от първите уеб търсачки - Wandex;
+- през 1994 г. започва разработката на Yahoo! като университетски проект;
+- през 1996 г. започва работата върху Google, който е официално основан като компания през 1998 г.;
+- едва през 2009 г. Microsoft пуска търсачката Bing;
+- други популярни интернет услуги са:
+      - електронна поща - e-mail;
+      - комуникация в реално време - chat.
+
+
+
+            Видове web технологии
+            
+- Progressive web applications - PWA / Прогресивни уеб приложения
+      - приложения в уеб, които могат да изглеждат като настолни приложения;
+      - след инсталиране създават икона на екрана;
+      - леки са и използват съвременни уеб технологии;
+      - някои уеб приложения могат да работят и без интернет.
+
+- Blockchain technology / Блокова верига
+      - криптирана система за съхранение на база данни;
+      - информация в блокове, която се свързва като верига;
+      - устойчива на атаки, понеже не позволява промяна на данни;
+      - позволява транзакции между потребители без намесата на трета страна;
+      - напълно прозрачна технология.
+
+- Internet of Things (IoT) / Интернет на нещата
+      - комуникация чрез прехвърляне на данни между устройствата без постоянна човешка намеса;
+      - приложение на технологията при камери, сензори, сигнално оборудване и други;
+      
+- Responsive Web Design / Адаптивен уеб дизайн
+      - подход за уеб разработка, който се използва за приспособяване към различни размери на екрана;
+      - сходен дизайн на уебсайт върху различни устройства независимо от размера на екрана;
+            пример:
+            <a href="./img/10/1.tag_for_adaptive_screen.png" target="_blank" rel="noopener noreferrer">
+            <img class="png_files_small" title="" src="./img/10/1.tag_for_adaptive_screen.png" alt=""> </a>  
+      
+
+            
+            Hypertext markup language - HTML
+
+- Основна структура на .html файл  - внимание всяка команда започва с < и завършва с >; 
+                                   - всеки отворен таг <> завършва след това със &lt;/> затварящ таг;
+
+            Пример за HTML файл:                                   
+
+      &lt;!DOCTYPE html>                                                                       - деклариране, че файлът е HTML5
+      &lt;html>                                                                                - Основен елемент в .html страница - таг 
+
+      &lt;head>                                                                                - Задава начало на head таг за метаданни
+          &lt;meta charset="UTF-8">
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+          &lt;title> File_name &lt;/title>                                                        - заглавие на сайт в заглавна лента
+          &lt;link rel="stylesheet" type="text/css" href="./css/visual.css">                   - задаване на стил от външен visual.css файл в подпапка с име css
+      &lt;/head>                                                                               - затваряне на head таг с / 
+
+      &lt;body>                                                                                - Задава начало на body таг 
+          &lt;div class="cover">                                                               - div контейнер с клас cover за стилове
+          &lt;br />                                                                            - нов ред 
+          &lt;h1> Име на уеб сайт &lt;/h1>                                                        - име на уебсайт
+          &lt;hr />                                                                            - хоризонтална черта
+          &lt;pre>                                                                             - отварянето таг на команда, която прави формата 
+          Свободен текст.......                                                             - pre дава възможност за въвеждане на форматиран текст
+          &lt;p> Текст в параграф &lt;/p>                                                         - поставяне на параграф
+                                                                                              на текста 1 към 1
+          &lt;input class="little_margins" type="number" id="amount"                           - input позволява въвеждане на текст
+          placeholder="Въведи сума" step="any">                                               id="amount" изпраща въведения текст 
+                                                                                              към функцията;
+          &lt;a href="https://example.com">Отиди към сайта&lt;/a>                                 - линк към външен сайт
+
+          &lt;a href="./img/image.png" target="_blank" rel="noopener noreferrer">              - добавяне на снимка с визуализация и отваряне на цял екран
+          &lt;img class="png_files" title="" src="./img/image.png alt=""> &lt;/a>              - class=png_files - извиква предварително дефиниран стил в .css файл 
+                                                                                            
+
+          &lt;button class="little_margins" onclick="convertCurrency()">Конвертирай /button>   - създава бутон, който извиква функция 
+                                                                                              предварително създадена в .js файл
+
+          &lt;/pre>                                                                            - затваря таг pre за текст 1 към 1
+          &lt;/div>                                                                            - затваряне на таг div
+      &lt;/body>                                                                               - затваряне на таг body 
+
+      &lt;/html>                                                                               - затваряне на таг html
+
+
+
+
+                  Други тагове в HTML: 
+              
+      &lt;span>&lt;/span>                                                                         - контейнер за текст без нов ред преди и след него
+      &lt;form>&lt;/form>                                                                         - изпращане на потребителски данни към сървъра с input елемент
+      &lt;input>                                                                               - събиране на текстова информация от потребителя
+      &lt;button>&lt;/button>                                                                     - бутон, върху който може да се натисне с различни опции 
+      &lt;ul>                                                                                  - неподредени данни от списък 
+      &lt;ol>                                                                                  - подредени данни от списък 
+      &lt;li>                                                                                  - ред от списък
+      &lt;strong>&lt;/strong>                                                                     - tag между който буквите са удебелени синтактично и визуално
+      &lt;b>&lt;/b>                                                                               - tag между който буквите са удебелени само визуално
+      &lt;i>&lt;/i>                                                                               - tag между който буквите са наклонени
+      &lt;ins>&lt;/ins>                                                                           - tag между който буквите са подчертани
+      &lt;em>&lt;/em>                                                                             - tag между който буквите са подчертани
+      &lt;mark>&lt;/mark>                                                                         - tag между който буквите са осветени
+      &lt;sub>&lt;/sub>                                                                           - tag за горен индекс
+      &lt;sup>&lt;/sup>                                                                           - tag за долен индекс
+
+
+примерна таблица:
+        <table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+      <th>A1</th>
+      <th>B1</th>
+      <th>C1</th>
+      <th>D1</th>      
+    </tr>
+    <tr>
+      <td>A2</td>
+      <td>B2</td>
+      <td>C2</td>
+      <td>D2</td>      
+    </tr>
+    <tr>
+      <td>A3</td>
+      <td>B3</td>
+      <td>C3</td>
+      <td>D3</td>      
+    </tr>
+    <tr>
+      <td>A4</td>
+      <td>B4</td>
+      <td>C4</td>
+      <td>D4</td>      
+    </tr>
+  </table>
+
+
+      HTML код, който стои зад таблицата:
+
+        &lt;table border="1" cellpadding="10" cellspacing="0">
+    &lt;tr>                                                                    - начало на таг за отваряне на ред 1
+      &lt;th>A1&lt;/th>                                                           - стойност в ред 1 и колона 1         
+      &lt;th>B1&lt;/th>                                                           - стойност в ред 1 и колона 2         
+      &lt;th>C1&lt;/th>                                                           - стойност в ред 1 и колона 3         
+      &lt;th>D1&lt;/th>                                                           - стойност в ред 1 и колона 4         
+    &lt;/tr>                                                                   - край на таг за затваряне на ред 1       
+
+    &lt;tr>                                                                    - начало на таг за отваряне на ред 2       
+      &lt;td>A2&lt;/td>                                                           - стойност в ред 2 и колона 1    
+      &lt;td>B2&lt;/td>                                                           - стойност в ред 2 и колона 2    
+      &lt;td>C2&lt;/td>                                                           - стойност в ред 2 и колона 3    
+      &lt;td>D2&lt;/td>                                                           - стойност в ред 2 и колона 4          
+    &lt;/tr>                                                                   - край на таг за затваряне на ред 2      
+
+    &lt;tr>                                                                    - начало на таг за отваряне на ред 3    
+      &lt;td>A3&lt;/td>                                                           - стойност в ред 3 и колона 1     
+      &lt;td>B3&lt;/td>                                                           - стойност в ред 3 и колона 2    
+      &lt;td>C3&lt;/td>                                                           - стойност в ред 3 и колона 3    
+      &lt;td>D3&lt;/td>                                                           - стойност в ред 3 и колона 4           
+    &lt;/tr>                                                                   - край на таг за затваряне на ред 3    
+
+    &lt;tr>                                                                    - начало на таг за отваряне на ред 4       
+      &lt;td>A4&lt;/td>                                                           - стойност в ред 4 и колона 1     
+      &lt;td>B4&lt;/td>                                                           - стойност в ред 4 и колона 2    
+      &lt;td>C4&lt;/td>                                                           - стойност в ред 4 и колона 3    
+      &lt;td>D4&lt;/td>                                                           - стойност в ред 4 и колона 4          
+    &lt;/tr>                                                                   - край на таг за затваряне на ред 4   
+
+
+- &lt;table>            – започва таблицата
+- border="1"         – добавя рамка около клетките
+- cellpadding        – разстояние между съдържанието и рамката на клетката
+- cellspacing        – разстояние между самите клетки
+- &lt;tr>               – ред в таблицата
+- &lt;th>               – заглавна клетка (удебелена и центрирана по подразбиране)
+- &lt;td>               – обикновена клетка с данни
+
+
+      
+- Създаване на .html в програмата Visual Studio Code:
+      - Отваряне на програмата -> Explorer -> Създаване/добавяне на създадена папка -> New Untitled Text File
+      <a href="./img/10/2.1_create_html_file_explorer.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files" title="" src="./img/10/2.1_create_html_file_explorer.png" alt=""> </a>  
+
+      - 1. Задаване на име - test, което завършва на .html ; !!! Началната страница се кръщава index.html 
+      - 2. !+Tab комбинация, която добавя начални команди. 
+      <a href="./img/10/2.2_name_and_startup_text.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files_big" title="" src="./img/10/2.2_name_and_startup_text.png" alt=""> </a>  
+
+____________________________________________________________________________________________________________________________________
+
+
+                  CSS (Cascading Style Sheets)
+                  
+
+- файл, който е част от уеб страницата и определя нейния външен вид и подредба на елементите;
+- именува стилове, които могат да бъдат прилагани за конкретни елементи от .html файла;
+- централизирани стилове, които могат да се приложат за множество .html страници;
+
+
+            Създаване на .css Външен файл с размери и цветове
+
+- Създаване на .css файл в програмата Visual Studio Code:
+      - Отваряне на програмата -> Explorer -> Създаване на подпапка към основна папка -> Дясно копче -> New Folder -> с име css
+      <a href="./img/10/3.1_create_folder_and_file_css.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files" title="" src="./img/10/3.1_create_folder_and_file_css.png" alt=""> </a>  
+
+      - 1. Дясно копче върху новата папка -> New File -> Задаване на име, което завършва на .css ;
+      - 2. Име на class "png_files" и "png_files_small" + примерен размер за височина height: 120px и 30px;
+      <a href="./img/10/3.2_name_and_example_text.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files" title="" src="./img/10/3.2_name_and_example_text.png" alt=""> </a>  
+
+- Свързване на .css файл към .html
+      - в head частта се добавя следната команда:
+            &lt;link rel="stylesheet" type="text/css" href="./css/visual.css"> :
+      <a href="./img/10/3.3_html_css_style_in_head.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files_60" title="" src="./img/10/3.3_html_css_style_in_head.png" alt=""> </a>            
+
+      - важно е в командата за извикване на изображение да е вмъкнат тагът: img class="png_files_small",
+        който създадохме в .css файла:
+      <a href="./img/10/3.4_html_tag_for_using_css_style.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files_60" title="" src="./img/10/3.4_html_tag_for_using_css_style.png" alt=""> </a>  
+
+      - примерно съдържание на .css файл 
+
+.background_color {                                                     - именуване на стил
+    background-color: black;
+}
+
+div {                                                                   - посочване на елемент, на който създаваме стил 
+    background-color: black;
+    border-width: 2px;
+}
+
+.large_margins {                                                        
+    font-family: Century;                                               - задаване на шрифт
+    font-size: xx-large;                                                - задаване размер на шрифта
+    background-color: #293B33;                                          - избираме цвят на полето в клетката
+    color: whitesmoke;                                                  - задаване цвят на шрифта 
+    margin-top: 5px;                                                    - задаване на горно отстояние 
+    margin-bottom: 5px;                                                 - задаване на долно отстояние
+    margin-right: 5px;                                                  - задаване на отстояние от дясно
+    margin-left: 5px;                                                   - задаване на отстояние от ляво
+    border-radius: 7px;                                                 - оформление на рамката на границите
+    border-color: white;                                                - цвят на рамката
+    padding: 3px;                                                       - отстояние между текст и рамка    
+}      
+
+pre {
+    color: white;
+    font-size: large;
+}
+
+.content {
+    position: relative;
+    padding: 1rem;
+}
+
+.cover {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-color: black;
+    z-index: 10;
+}
+
+            Вътрешен - Internal чрез използване на дефиниран елемент &lt;style> в секцията &lt;head> 
+      
+      - дефиниран предварително в .html страницата 
+      - пример:
+
+&lt;head>
+      &lt;style> 
+            body {background-color: black}                 - черен фон на страницата 
+            h1 {color: green}                              - зелен цвят на елементите в таг h1 
+            p {color: white}                               - бял цвят на елементите в таг p 
+      &lt;/style> 
+&lt;/head>            
+
+
+            Вътрешен - Internal чрез използване на style в самте елементи:
+
+      - пример:
+
+&lt;p style="color:blue;"> Параграф със син текст &lt;/p>
+
+_________________________________________________________________________________________________________________________________
+
+            Създаване на .js файл, който съдържа различни функции
+
+
+- Създаване на .js файл в програмата Visual Studio Code:
+      - Отваряне на програмата -> Explorer -> Създаване на подпапка към основна папка -> Дясно копче -> New Folder -> с име js 
+      <a href="./img/10/4.1_create_folder_and_file_js.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files" title="" src="./img/10/4.1_create_folder_and_file_js.png" alt=""> </a>  
+
+      - 1. Дясно копче върху новата папка -> New File -> Задаване на име, което завършва на .js ;
+      - 2. Име на class "png_files" и "png_files_small" + примерен размер за височина height: 120px и 30px;
+      <a href="./img/10/4.2_name_and_example_in_js_for_change_color_on_mouse_point.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files_big" title="" src="./img/10/4.2_name_and_example_in_js_for_change_color_on_mouse_point.png" alt=""> </a>
+      
+- Свързване на .js файл към .html 
+      - в body частта се добавя следната команда (с отварящи скоби в началото: <):
+            &lt;script src="./js/index.js">&lt;/script>
+      <a href="./img/10/4.3_html_js_script_in_body.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files_60" title="" src="./img/10/4.3_html_js_script_in_body.png" alt=""> </a> 
+
+      - сега всички текстове с имена от изброените класове в .js ще сменят цвета си, 
+        когато показалеца на мишката е върху тях. 
+      <a href="./img/10/4.4_html_class_names_with_changing_colors.png" target="_blank" rel="noopener noreferrer">
+      <img class="png_files_60" title="" src="./img/10/4.4_html_class_names_with_changing_colors.png" alt=""> </a>           
+
+      
+        </pre>
+            <hr />
+            <br />
+            <a class="large_margins" href="https://vladislavnedyalkovivanov.github.io/home" target="_self"
+                  rel="noopener noreferrer">Начална страница</a>
+            <br />
+            <br />
+            <a class="middle_margins"
+                  href="https://vladislavnedyalkovivanov.github.io/home/resources/text/kmit/1.university.html"
+                  target="_self" rel="noopener noreferrer">Връщане към теми за държавен изпит в университета</a>
+            <br />
+            <br />
+      </div>
+      <br />
+      <script src="./js/index.js"></script>
+</body>
+
+</html>
