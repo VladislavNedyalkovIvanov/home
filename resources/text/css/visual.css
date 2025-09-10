@@ -77,6 +77,10 @@ hr {
     color: silver;
 }
 
+pre {
+    background-color: black;
+}
+
 span {
     color: white;
 }
