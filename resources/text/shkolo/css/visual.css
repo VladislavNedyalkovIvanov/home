@@ -145,6 +145,14 @@ img {
     height: 60px;
 }
 
+.png_files_80 {
+    height: 80px;
+}
+
+.png_files_160 {
+    height: 160px;
+}
+
 .png_files_big {
     height: 240px;
 }
