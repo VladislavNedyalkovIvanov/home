@@ -141,12 +141,48 @@ img {
     height: 30px;
 }
 
+.png_files_40 {
+    height: 40px;
+}
+
 .png_files_60 {
     height: 60px;
 }
 
+.png_files_80 {
+    height: 80px;
+}
+
+.png_files_110 {
+    height: 110px;
+}
+
+.png_files_160 {
+    height: 160px;
+}
+
 .png_files_big {
     height: 240px;
+}
+
+.png_files_300 {
+    height: 300px;
+}
+
+.png_files_350 {
+    height: 350px;
+}
+
+.png_files_400 {
+    height: 400px;
+}
+
+.png_files_500 {
+    height: 500px;
+}
+
+.png_files_800 {
+    height: 800px;
 }
 
 .content {
