@@ -91,6 +91,49 @@ function reset() {
 
 
 
+function calculate(operation) {
+    const bin1 = document.getElementById('binary1').value.trim();
+    const bin2 = document.getElementById('binary2').value.trim();
+
+    // Проверка за валидност
+    if (!/^[01]+$/.test(bin1) || !/^[01]+$/.test(bin2)) {
+        document.getElementById('result').textContent = "Моля, въведи валидни двоични числа.";
+        return;
+    }
+
+    const num1 = parseInt(bin1, 2);
+    const num2 = parseInt(bin2, 2);
+    let result;
+
+    if (operation === 'add') {
+        result = num1 + num2;
+    } else if (operation === 'subtract') {
+        if (num1 < num2) {
+            document.getElementById('result').textContent = "Резултатът ще е отрицателен. Не се поддържа.";
+            return;
+        }
+        result = num1 - num2;
+    }
+
+    const binaryResult = result.toString(2);
+    document.getElementById('result').textContent = `Резултат: ${binaryResult} (десетично: ${result})`;
+}
+
+var boundaries = document.querySelectorAll(".middle_margins, .little_margins, .large_margins");
+
+boundaries.forEach(function (boundary) {
+    var originalColor = boundary.style.color || window.getComputedStyle(boundary).color;
+
+    boundary.addEventListener("mouseover", function () {
+        this.style.color = 'green';
+    });
+
+    boundary.addEventListener("mouseout", function () {
+        this.style.color = originalColor;
+    });
+});
+
+
 const rateBGNtoEUR = 0.511292;   // 1 лв = 0.511292 €
 const rateEURtoBGN = 1.95583;    // 1 € = 1.95583 лв
 
@@ -132,19 +175,39 @@ function convertCurrency() {
 
 
 
+function convertToBinary() {
+    let num = parseInt(document.getElementById("decimalInput").value);
+    let binary = "";
+    for (let i = num; i > 0; i = Math.floor(i / 2)) {
+        binary = (i % 2) + binary;
+    }
+    document.getElementById("binaryResult").innerText = "Двоично: " + binary;
+}
+
+function convertToDecimal() {
+    let binaryStr = document.getElementById("binaryInput").value;
+    let decimal = 0;
+    for (let i = 0; i < binaryStr.length; i++) {
+        let bit = parseInt(binaryStr[binaryStr.length - 1 - i]);
+        decimal += bit * Math.pow(2, i);
+    }
+    document.getElementById("decimalResult").innerText = "Десетично: " + decimal;
+}
 
 
-var boundaries = document.querySelectorAll(".middle_margins, .little_margins, .large_margins");
+function changeBoxColor(r, g, b) {
+    const colorBox = document.getElementById('colorBox');
+    const rgb = `rgb(${r}, ${g}, ${b})`;
+    colorBox.style.backgroundColor = rgb;
+}
 
-boundaries.forEach(function (boundary) {
-    var originalColor = boundary.style.color || window.getComputedStyle(boundary).color;
+function applyColor() {
+    const r = document.getElementById('r').value;
+    const g = document.getElementById('g').value;
+    const b = document.getElementById('b').value;
 
-    boundary.addEventListener("mouseover", function () {
-        this.style.color = 'green';
-    });
+    changeBoxColor(r, g, b);
+}
 
-    boundary.addEventListener("mouseout", function () {
-        this.style.color = originalColor;
-    });
-});
+
 
