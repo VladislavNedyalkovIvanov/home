@@ -7,7 +7,6 @@ body {
     background-color: black;
     user-select: none;
     margin-top: 50px;
-
 }
 
 /*цвят на background     #293B33  - ПРИМЕР   user-select - не може да се копира текст    */
@@ -22,7 +21,8 @@ body {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    margin-left: 40px; /* Това го избутва надясно */
+    margin-left: 40px;
+    /* Това го избутва надясно */
     width: 200px;
     height: 200px;
     border: 2px solid #fff;
@@ -32,8 +32,7 @@ body {
 a {
     border: none;
     text-decoration: none;
-    color:aquamarine    
-
+    color: aquamarine;
 }
 
 input {
@@ -54,7 +53,14 @@ input {
     border-style: solid;
     border-radius: 7px;
     border-color: white;
-    padding: 3px;    
+    padding: 3px;
+}
+
+.large_margins:hover {
+    transform: scale(1.03);
+    /* Увеличава текста с 3% */
+    cursor: pointer;
+    /* Сменя курсора на ръчичка */
 }
 
 .middle_margins {
@@ -69,7 +75,14 @@ input {
     border-style: solid;
     border-radius: 7px;
     border-color: lawngreen;
-    padding: 3px;    
+    padding: 3px;
+}
+
+.middle_margins:hover {
+    transform: scale(1.03);
+    /* Увеличава текста с 3% */
+    cursor: pointer;
+    /* Сменя курсора на ръчичка */
 }
 
 .little_margins {
@@ -87,17 +100,46 @@ input {
     padding: 2px;
 }
 
+.little_margins:hover {
+    transform: scale(1.03);
+    /* Увеличава текста с 3% */
+    cursor: pointer;
+    /* Сменя курсора на ръчичка */
+}
 
 div {
     background-color: black;
     border-width: 2px;
 }
 
+.title-container {
+    text-align: center;
+    /* Това ще върне h1 в средата */
+    width: 100%;
+    /* Гарантира, че контейнерът заема целия ред */
+    margin-bottom: 10px;
+    /* Малко разстояние под заглавието */
+}
+
 h1 {
     color: greenyellow;
     /*цвят на текст h1*/
+    font-size: 35px;
     font-family: Arial;
-    text-align: center;
+    text-align: right;
+    transition: transform 0.3s ease;
+    /* Прави уголемяването плавно */
+    display: inline-block;
+    /* Важно, за да работи transform правилно */
+}
+
+h1:hover {
+    transform: scale(1.2);
+    /* Увеличава текста с 20% */
+    cursor: pointer;
+    /* Сменя курсора на ръчичка */
+    color: #adff2f;
+    /* Малко по-светло зелено например */
 }
 
 p {
@@ -112,8 +154,14 @@ pre {
     line-height: 1.3;
 }
 
+
 hr {
-    color: silver;
+    width: 100%;
+    /* Заема цялата широчина на контейнера */
+    border: 0;
+    /* Премахва дефолтната рамка */
+    border-top: 2px solid silver;
+    /* Твоят цвят и дебелина */
 }
 
 span {
@@ -239,4 +287,46 @@ img {
     margin-top: 20px;
     text-align: left;
     transform: none;
+}
+
+.main-content-wrapper {
+    display: flex;
+    justify-content: left;
+    /* Разбутва бутоните вляво и логото вдясно */
+    align-items: flex-start;
+    /* Подравнява ги отгоре */
+    gap: 150px;
+    margin: 40px 0;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    /* ТОВА е най-важното - прави ги на колона */
+    align-items: flex-start;
+    /* Подравнява самите бутони вляво */
+    flex-shrink: 0;
+    padding-left: 10px;   /* Отстъп отляво */
+    padding-right: 10px;  /* Отстъп отдясно (за всеки случай) */
+    /* Пречи на браузъра да свива бутоните */
+}
+
+.side-logo {
+    max-width: 300px;
+    height: auto;
+    opacity: 0.5;
+    /* Прави логото 70% видимо */
+    transition: opacity 0.3s;
+    transition: transform 1s ease;
+    /* Прави уголемяването плавно */
+    /* Бонус: плавна промяна при посочване */
+}
+
+/* Бонус: когато минеш с мишката върху него, става плътно */
+.side-logo:hover {
+    opacity: 1;
+    transform: scale(1.3);
+    /* Увеличава текста с 50% */
+    cursor: pointer;
+    /* Сменя курсора на ръчичка */
 }
