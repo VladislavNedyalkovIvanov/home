@@ -7,79 +7,72 @@
     <meta name="description" content="Сайт за обучение" />
     <meta name="author" content="Vladislav Ivanov" />
     <meta name="keyboard" content="HTML, CSS, JS, C#" />
-    <title>Сайт за обучение</title>
+    <title>Сайт за споделяне на опит</title>
     <link rel="stylesheet" type="text/css" href="./resources/css/visual.css">
     <link rel="icon" type="image/x-icon" href="./resources/icons/image.ico">
 </head>
 
 <body>
-    <h1> Web страница за споделяне на материали</h1>
-    <br />
-    <div class="background_color">
-        <hr />
-        <a href="1.IKT.html" target="_self" rel="noopener noreferrer">
-            <button class="middle_margins" type="button">Ръководител ИКТ - споделен опит</button>
-        </a>
-        <br />
-        <a href="2.system_administration.html" target="_self" rel="noopener noreferrer">
-            <button class="middle_margins" type="button">Системна администрация - споделен опит</button>
-        </a>
-        <br />
-        <a href="3.software.html" target="_self" rel="noopener noreferrer">
-            <button class="middle_margins" type="button">Работа с платформи и специализиран софтуер</button>
-        </a>
-        <br />
-        <a href="4.history.html" target="_self" rel="noopener noreferrer">
-            <button class="middle_margins" type="button">Учебни материали по История и цивилизации</button>
-        </a>
-        <br />
-        <a href="5.KMIT.html" target="_self" rel="noopener noreferrer">
-            <button class="middle_margins" type="button">Учебни материали КМИТ</button>
-        </a>
-        <br />
-        <a href="6.galery.html" target="_self" rel="noopener noreferrer">
-            <button class="middle_margins" type="button">Галерия с мои рисунки</button>
-        </a>
+    <div class="title-container">
+        <h1>Сайт за споделяне на опит</h1>
+    </div>
+    <hr />
+
+    <div class="main-content-wrapper">
+        <div class="menu-buttons">
+            <a href="1.IKT.html"><button class="middle_margins" type="button">Ръководител ИКТ - споделен
+                    опит</button></a>
+            <a href="2.system_administration.html"><button class="middle_margins" type="button">Системна администрация -
+                    споделен опит</button></a>
+            <a href="3.software.html"><button class="middle_margins" type="button">Работа с платформи и специализиран
+                    софтуер</button></a>
+            <a href="4.history.html"><button class="middle_margins" type="button">Учебни материали по История и
+                    цивилизации</button></a>
+            <a href="5.KMIT.html"><button class="middle_margins" type="button">Учебни материали КМИТ</button></a>
+            <a href="6.galery.html"><button class="middle_margins" type="button">Галерия с мои рисунки</button></a>
+        </div>
+
+        <div class="logo-container">
+            <img src="./resources/icons/image.svg" alt="Лого" class="side-logo">
+        </div>
+    </div>
+    <div class="calculator-section">
         <h2 id="freetext">Валутен калкулатор</h2>
         <input class="little_margins" type="number" id="amount" placeholder="Въведи сума" step="any">
         <br><br>
-
         <select class="little_margins" id="direction">
-            <option class="little_margins" value="bgnToEur">Лева → Евро</option>
-            <option class="little_margins" value="eurToBgn">Евро → Лева</option>
+            <option value="bgnToEur">Лева → Евро</option>
+            <option value="eurToBgn">Евро → Лева</option>
         </select>
         <br>
         <button class="middle_margins" onclick="convertCurrency()">Конвертирай</button>
-
         <div id="result" style="margin-top: 20px; font-size: 20px;"></div>
-
-
-
-        <br />
-        <br />
-        <a class="little_margins" href="https://nau4i.me" target="_blank" rel="noopener noreferrer">Сайт за обучение по
-            програмиране на български език.</a>
+    </div>
+    <br />
+    <br />
+    <div class="links-section">
+        <a class="little_margins" href="https://nau4i.me" target="_blank">Сайт за обучение по програмиране на български
+            език.</a>
         <span><strong>Можете да се научите по лесен и достъпен начин.</strong></span>
         <br />
         <br />
-        <a class="little_margins" href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">Сайт за
-            обучение по програмиране на английски език.</a>
+        <a class="little_margins" href="https://www.w3schools.com" target="_blank">Сайт за обучение по програмиране на
+            английски език.</a>
         <span><strong>Тук има възможност да пробвате HTML.</strong></span>
         <br />
         <br />
-        <a class="little_margins" href="https://copilot.microsoft.com" target="_blank"
-            rel="noopener noreferrer">Copilot, искрено благодаря за помощта!</a>
+        <a class="little_margins" href="https://copilot.microsoft.com" target="_blank">Copilot, искрено благодаря за
+            помощта!</a>
         <span><strong>Ако имате затруднения, пробвайте и вие.</strong></span>
-        <br />
-        <br />
-        <hr />
     </div>
-    <p style="text-align:right;" title="Основен текст">Автор на сайта: <b><i>Владислав Недялков Иванов</i></b></p>
-    <p style="text-align:right;" title="Основен текст">е-mail: <b><i>vladislav.nedyalkov.ivanov@gmail.com</i></b></p>
-    <p style="text-align:right;" title="Основен текст">2026 г.</p>
-    <p style="text-align:center;" title="Основен текст">Всичко в сайта е безплатно и е с учебна цел. Ако питате защо,
+
+    <hr />
+    <p style="text-align:right;">Автор на сайта: <b><i>Владислав Недялков Иванов</i></b></p>
+    <p style="text-align:right;">е-mail: <b><i>vladislav.nedyalkov.ivanov@gmail.com</i></b></p>
+    <p style="text-align:right;">2026 г.</p>
+    <p style="text-align:center;">Всичко в сайта е безплатно и е с учебна цел. Ако питате защо,
         отговорът ми е следният - инвестиция в бъдещето, което е в ръцете на тези, които обучаваме днес.</p>
-    <br />
+
     <script src="./resources/js/index.js"></script>
 </body>
 
