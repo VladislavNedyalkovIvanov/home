@@ -276,12 +276,19 @@ img {
     border-radius: 7px;
 }
 
+.calc-row {
+    display: flex;
+    align-items: center;  /* Центрира ги вертикално един спрямо друг */
+    gap: 15px;            /* Разстоянието между бутона и резултата */
+    flex-wrap: wrap;      /* Важно за мобилни устройства */
+    margin-top: 10px;
+}
+
 #result {
-    position: absolute;
     color: greenyellow;
     font-size: 20px;
-    margin-top: 20px;
-    transform: translate(100%, -700%);
+    font-weight: bold;
+    /* Вече няма нужда от position: absolute или transform */
 }
 
 #freetext {
