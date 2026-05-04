@@ -53,6 +53,7 @@ input {
     border-style: solid;
     border-radius: 7px;
     border-color: white;
+    max-width: 90vw;
     padding: 3px;
 }
 
@@ -75,7 +76,9 @@ input {
     border-style: solid;
     border-radius: 7px;
     border-color: lawngreen;
+    max-width: 90vw;    
     padding: 3px;
+
 }
 
 .middle_margins:hover {
@@ -97,6 +100,7 @@ input {
     border-style: solid;
     border-radius: 5px;
     border-color: lawngreen;
+    max-width: 90vw;    
     padding: 2px;
 }
 
@@ -291,12 +295,15 @@ img {
 
 .main-content-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     /* Разбутва бутоните вляво и логото вдясно */
     align-items: flex-start;
     /* Подравнява ги отгоре */
-    gap: 150px;
+    gap: 50px;
     margin: 40px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .menu-buttons {
@@ -306,8 +313,12 @@ img {
     align-items: flex-start;
     /* Подравнява самите бутони вляво */
     flex-shrink: 0;
-    padding-left: 10px;   /* Отстъп отляво */
-    padding-right: 10px;  /* Отстъп отдясно (за всеки случай) */
+    padding-left: 10px;
+    /* Отстъп отляво */
+    padding-right: 10px;
+    /* Отстъп отдясно (за всеки случай) */
+    max-width: 100%;
+    /* Пречи на менюто да стане по-широко от екрана */
     /* Пречи на браузъра да свива бутоните */
 }
 
@@ -320,6 +331,22 @@ img {
     transition: transform 1s ease;
     /* Прави уголемяването плавно */
     /* Бонус: плавна промяна при посочване */
+    flex-shrink: 1;
+    /* Позволява на логото да се свие, ако е нужно */
+}
+
+/* Специално за телефони (екрани под 600px) */
+@media (max-width: 600px) {
+    .main-content-wrapper {
+        flex-direction: column;
+        /* Подрежда менюто и логото едно под друго */
+        gap: 20px;
+    }
+
+    .side-logo {
+        max-width: 180px;
+        /* По-малко лого на телефон */
+    }
 }
 
 /* Бонус: когато минеш с мишката върху него, става плътно */
@@ -339,6 +366,22 @@ img {
     transition: opacity 0.3s;
     /* Прави уголемяването плавно */
     /* Бонус: плавна промяна при посочване */
+    flex-shrink: 1;
+    /* Позволява на логото да се свие, ако е нужно */
+}
+
+/* Специално за телефони (екрани под 600px) */
+@media (max-width: 600px) {
+    .main-content-wrapper {
+        flex-direction: column;
+        /* Подрежда менюто и логото едно под друго */
+        gap: 20px;
+    }
+
+    .side-logo {
+        max-width: 180px;
+        /* По-малко лого на телефон */
+    }
 }
 
 /* Бонус: когато минеш с мишката върху него, става плътно */
