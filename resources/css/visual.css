@@ -312,7 +312,7 @@ img {
 }
 
 .side-logo {
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
     opacity: 0.5;
     /* Прави логото 70% видимо */
@@ -325,8 +325,25 @@ img {
 /* Бонус: когато минеш с мишката върху него, става плътно */
 .side-logo:hover {
     opacity: 1;
-    transform: scale(1.3);
+    transform: scale(1.25);
     /* Увеличава текста с 50% */
+    cursor: pointer;
+    /* Сменя курсора на ръчичка */
+}
+
+.side-logo-index {
+    max-width: 300px;
+    height: auto;
+    opacity: 0.3;
+    /* Прави логото 70% видимо */
+    transition: opacity 0.3s;
+    /* Прави уголемяването плавно */
+    /* Бонус: плавна промяна при посочване */
+}
+
+/* Бонус: когато минеш с мишката върху него, става плътно */
+.side-logo-index:hover {
+    opacity: 0.5;
     cursor: pointer;
     /* Сменя курсора на ръчичка */
 }
