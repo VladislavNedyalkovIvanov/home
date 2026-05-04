@@ -125,7 +125,7 @@ boundaries.forEach(function (boundary) {
     var originalColor = boundary.style.color || window.getComputedStyle(boundary).color;
 
     boundary.addEventListener("mouseover", function () {
-        this.style.color = 'green';
+        this.style.color = 'greenyellow';
     });
 
     boundary.addEventListener("mouseout", function () {
