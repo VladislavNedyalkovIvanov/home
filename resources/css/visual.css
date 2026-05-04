@@ -384,7 +384,7 @@ img {
 .side-logo:hover {
     opacity: 1;
     transform: scale(1.25);
-    /* Увеличава текста с 50% */
+    /* Увеличава текста с 25% */
     cursor: pointer;
     /* Сменя курсора на ръчичка */
 }
