@@ -164,7 +164,7 @@ hr {
     /* Заема цялата широчина на контейнера */
     border: 0;
     /* Премахва дефолтната рамка */
-    border-top: 2px solid rgb(75, 75, 75);
+    border-top: 1.5px solid rgb(155, 155, 155);
     /* Твоят цвят и дебелина */
 }
 
@@ -294,10 +294,18 @@ img {
 #reset {
     background-color: rgb(79, 79, 79);
     color: whitesmoke;
-    border-width: 5px;
+    border-width: 2px;
     border-color: silver;
     border-style: solid;
     border-radius: 7px;
+    opacity: 1;    
+    font-size: medium;
+}
+
+#increase,
+#decrease,
+#reset:hover {
+    cursor: pointer;
 }
 
 .calc-row {
