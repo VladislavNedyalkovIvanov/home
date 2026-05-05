@@ -76,7 +76,7 @@ input {
     border-style: solid;
     border-radius: 7px;
     border-color: lawngreen;
-    max-width: 90vw;    
+    max-width: 90vw;
     padding: 3px;
 
 }
@@ -100,7 +100,7 @@ input {
     border-style: solid;
     border-radius: 5px;
     border-color: lawngreen;
-    max-width: 90vw;    
+    max-width: 90vw;
     padding: 2px;
 }
 
@@ -134,6 +134,7 @@ h1 {
     transition: transform 0.3s ease;
     /* Прави уголемяването плавно */
     display: inline-block;
+    opacity: 0.75;
     /* Важно, за да работи transform правилно */
 }
 
@@ -143,6 +144,7 @@ h1:hover {
     cursor: pointer;
     /* Сменя курсора на ръчичка */
     color: #adff2f;
+    opacity: 1;
     /* Малко по-светло зелено например */
 }
 
@@ -193,7 +195,7 @@ img {
 
 .height_pictures {
     height: 500px;
-    opacity: 0.75;    
+    opacity: 0.75;
 }
 
 .height_pictures:hover {
@@ -205,7 +207,7 @@ img {
 
 .weight_pictures {
     height: 300px;
-    opacity: 0.75;      
+    opacity: 0.75;
 }
 
 .weight_pictures:hover {
@@ -302,9 +304,12 @@ img {
 
 .calc-row {
     display: flex;
-    align-items: center;  /* Центрира ги вертикално един спрямо друг */
-    gap: 15px;            /* Разстоянието между бутона и резултата */
-    flex-wrap: wrap;      /* Важно за мобилни устройства */
+    align-items: center;
+    /* Центрира ги вертикално един спрямо друг */
+    gap: 15px;
+    /* Разстоянието между бутона и резултата */
+    flex-wrap: wrap;
+    /* Важно за мобилни устройства */
     margin-top: 10px;
 }
 
