@@ -55,15 +55,26 @@
 <a href="./img/7/2_Restriction.png" target="_blank" rel="noopener noreferrer">
 <img class="png_files_800" title="" src="./img/7/2_Restriction.png" alt=""> </a>               
 
-    Справки за вписване и изпращане на имейл
-
-1. Вписване с администраторски акаунт
-2. Откриване профила на ученик/учител
-3. Investigate -> Audit logs related to this user -> 2-ра страница -> Gmail log events ->
-     Add Filter: <b>From (Envelope):       Contains: потребителски профил</b>
-     Add Filter: <b>IP address: Is:        за търсене на активност по IP адрес</b>
-
-       View logs -> Export all
+        <b>Справки за вписване и изпращане на имейл</b>
+    
+    1. Вписване с администраторски акаунт
+    2. Откриване профила на ученик/учител
+    3. Investigate -> Audit logs related to this user -> 2-ра страница -> Gmail log events ->
+         Add Filter: <b>From (Envelope):       Contains: потребителски профил</b>
+         Add Filter: <b>IP address: Is:        за търсене на активност по IP адрес</b>
+    
+            <i>View logs -> Export all</i>
+    
+    
+        <b>Забраняване на Google Workspace акаунти да използват външни платформи</b>
+    
+    1. Вписване с администраторски акаунт    <a href="https://admin.google.com" target="_self" rel="noopener noreferrer"><button class="little_margins" type="butoon">Link към администраторски панел</button></a>
+    2. Security -> Access and data control -> API controls -> <b>MANAGE APP ACCESS</b>
+    
+            <i>Accessed apps -> View list</i>
+    
+    3. Add Filter -> App name -> Име на приложението -> Change access -> Избиране на група/всички -> Next -> 
+            <b>[v] Blocked</b> -> <i>Next -> [ ] Notify users -> CHANGE ACCESS</i>
 
     </pre>
         <hr />
