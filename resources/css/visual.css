@@ -130,7 +130,7 @@ h1 {
     /*цвят на текст h1*/
     font-size: 35px;
     font-family: Arial;
-    text-align: right;
+    text-align: center;
     transition: transform 0.3s ease;
     /* Прави уголемяването плавно */
     display: inline-block;
