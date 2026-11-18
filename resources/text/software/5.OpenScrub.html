@@ -12,7 +12,7 @@
 <body>
     <div class="cover">
         <br />
-        <h1>Информационна система за работа с механизъм за обхват</h1>
+        <h1>Инсталация на програма за автоматично замъгляване при видео със заснети лица</h1>
         <br />
         <a class="large_margins" href="../../../index.html" target="_self"
             rel="noopener noreferrer">Начална страница</a>
@@ -25,26 +25,26 @@
         <hr />
         <pre>
 
-         Инсталация на програма за замъгляване при заснети лица
-
 1. Инсталирате програмата OpenScrub-Setup.exe       
-   - <a href="https://github.com/austinmabry/OpenScrub/releases/latest/download/OpenScrub-Setup.exe" target="_blank" rel="noopener noreferrer">линк за сваляне на програмата от сайта на разработчика</a>
-   - <a href="https://drive.google.com/file/d/1yk5JhHC_V4zAtBOwTvUMoOdIjqbWWze1/view?usp=sharing" target="_blank" rel="noopener noreferrer">сваляне на допълнителни добавки за програмата</a>
+   - <a href="https://github.com/austinmabry/OpenScrub/releases/latest/download/OpenScrub-Setup.exe" target="_blank" rel="noopener noreferrer">линк в Github за сваляне на програмата от сайта на разработчика</a> <i>Благодарности на https://github.com/austinmabry!</i>
 
-2. Разархивирате архива "<b><i>OpenScrub.zip</i></b>" и копирате папката <b><i>OpenScrub</i></b> в директория C:\
+   - <a href="https://drive.google.com/file/d/1yk5JhHC_V4zAtBOwTvUMoOdIjqbWWze1/view?usp=sharing" target="_blank" rel="noopener noreferrer">сваляне на допълнителни добавки за програмата</a> <i>За отстраняване на проблем със стартиране от акаунт в Windows с кирилица.</i>
+
+2. Разархивирате архива "<b><i>OpenScrub.zip</i></b>" и копирате папката <b><i>OpenScrub</i></b> в главната директория на локален диск <b><i>C:\</i></b>
 3. Стартирате програмата от скрипта: <b><i>C:\OpenScrub\Start_with_C_OpenScrub.bat</i></b>
    - или копирате прекия път на десктопа - <b><i>OpenScrub Web.lnk</i></b> (част от архива OpenScrub.zip)
 
 4. Инсталирате програмата (свалена от линка на разработчика или от OpenScrub.zip -> OpenScrub-Setup.exe)
 5. Отваряте в браузър следния линк:  <a href="https://localhost:8384/" target="_blank" rel="noopener noreferrer">https://localhost:8384/</a>
 6. Влизате в настройките и активирате следните engines:
-   - Detection models:
+   - Detection models <i>слагате отметки на</i>:
      - Face Model                     -> <b>[v] SCRFD-10G    [donwload]</b>
      - Person (full-body blur) model  -> <b>[v] YOLO11n-seg  [download]</b>
 
-7. <b><i>[v]face [default]</i></b>
+7. <b><i>[v] face [default]</i></b>
    - ако някое от лицата трябва да остане незамъглено се слага отметка и на <b><i>ignore (never blur)</i></b>
    - за по-бърза обработка <i>(ако е необходимо)</i>, може да се избере Scan speed: <b><i>Balanced - 2x faster</i></b>
+
 8. Start scan -> Изчаква се да се обработи видеото <i>(за 1-минутен клип отнема около 10-15 минути)</i>
 9. Преглед на кадрите, които ще бъдат замъглени, които са Blur ще се замъглят
 10. <b><i>Save edits & render -> Download redacted video</i></b>
@@ -57,8 +57,7 @@ set LOCALAPPDATA=C:\OpenScrub
 set USERPROFILE=C:\OpenScrub
 start "" "C:\Program Files\OpenScrub\openscrub-web.exe"
 
-<i>*Използването на скрипта не е задължително, ако името на акаунта ви в Windows не е на кирилица.</i>
-       
+<i>*Използването на скрипта не е необходимо, ако името на акаунта ви в Windows не е на кирилица.</i>
             </pre>
         <hr />
         <br />
