@@ -239,6 +239,10 @@ img {
     height: 110px;
 }
 
+.png_files_140 {
+    height: 140px;
+}
+
 .png_files_160 {
     height: 160px;
 }
@@ -252,6 +256,10 @@ img {
 }
 
 .png_files_big {
+    height: 240px;
+}
+
+.png_files_240 {
     height: 240px;
 }
 
